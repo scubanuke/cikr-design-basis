@@ -15,6 +15,7 @@ SCRM_DOI = '10.5281/zenodo.21365261'
 PDF_BASE = 'https://scubanuke.github.io/publications/cikr/edition-1/'
 SUBSTACK = 'https://timroxey.substack.com'
 DRAFT_BANNER = True          # set False for the public launch
+BANNER_TEXT = 'Early preview — November 2026'
 MASTER_DRAFT_LIVE = False    # set True when Project 2 deposits the master draft
 MASTER_DRAFT_DOI = ''        # fill when deposited
 MASTER_DRAFT_CHAPTERS = {}   # sector slug -> chapter title, from Project 2's chapter-to-sector map
@@ -69,7 +70,7 @@ def page(path, title, body, desc='', terms=True):
     depth = path.count('/'); r = '../' * depth
     nav = ''.join('<a href="%s%s"%s>%s</a>' % (r, h, ' class="on" aria-current="page"' if h == path else '', e(t)) for h, t in NAV)
     gl = {k: {'t': v['term'], 'd': v['def'], 'm': v['match']} for k, v in GLOSSARY.items()}
-    banner = '<div class="draftbar">DRAFT FOR THE AUTHOR’S REVIEW — not yet published</div>' if DRAFT_BANNER else ''
+    banner = '<div class="draftbar">%s</div>' % e(BANNER_TEXT) if DRAFT_BANNER else ''
     out = f'''<!DOCTYPE html>
 <html lang="en" data-root="{r}">
 <head>
