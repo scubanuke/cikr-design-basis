@@ -1,0 +1,297 @@
+{
+ "source": "DBA_Facility_Class_Register.xlsx (Project 0), read 1 November 2026; titles only, not part of the frozen edition",
+ "sectors": {
+  "energy": [
+   {
+    "title": "Large hydroelectric storage",
+    "status": "written",
+    "group": "Electric power"
+   },
+   {
+    "title": "Large extra-high-voltage transmission substation",
+    "status": "written",
+    "group": "Electric power"
+   },
+   {
+    "title": "High-voltage direct-current interconnect",
+    "status": "written",
+    "group": "Electric power"
+   },
+   {
+    "title": "Major natural gas compressor station",
+    "status": "written",
+    "group": "Electric power"
+   },
+   {
+    "title": "Distribution substation with edge generation",
+    "status": "written",
+    "group": "Electric power"
+   },
+   {
+    "title": "Grid operator control function (ISO, RTO and balancing authority)",
+    "status": "written",
+    "group": "Electric power"
+   },
+   {
+    "title": "Coal-fired generation",
+    "status": "written",
+    "group": "Electric power"
+   },
+   {
+    "title": "Oil-fired generation and peakers",
+    "status": "written",
+    "group": "Electric power"
+   },
+   {
+    "title": "Renewable generation and battery storage",
+    "status": "written",
+    "group": "Electric power"
+   },
+   {
+    "title": "Natural gas transmission",
+    "status": "written",
+    "group": "Natural gas"
+   },
+   {
+    "title": "Natural gas processing",
+    "status": "written",
+    "group": "Natural gas"
+   },
+   {
+    "title": "Local gas distribution",
+    "status": "written",
+    "group": "Natural gas"
+   },
+   {
+    "title": "LNG terminal",
+    "status": "planned",
+    "group": "Natural gas"
+   },
+   {
+    "title": "Petroleum refining",
+    "status": "written",
+    "group": "Petroleum"
+   },
+   {
+    "title": "Offshore crude production",
+    "status": "written",
+    "group": "Petroleum"
+   },
+   {
+    "title": "Terminals and storage",
+    "status": "written",
+    "group": "Petroleum"
+   },
+   {
+    "title": "Crude and product transport",
+    "status": "written",
+    "group": "Petroleum"
+   },
+   {
+    "title": "Marine crude and product terminals",
+    "status": "planned",
+    "group": "Petroleum"
+   }
+  ],
+  "water": [
+   {
+    "title": "Distribution pump station",
+    "status": "written"
+   },
+   {
+    "title": "Storage reservoir",
+    "status": "written"
+   },
+   {
+    "title": "Large-scale seawater reverse-osmosis desalination",
+    "status": "written"
+   },
+   {
+    "title": "Wastewater treatment facility",
+    "status": "written"
+   }
+  ],
+  "chemical": [
+   {
+    "title": "Chemical production and synthesis",
+    "status": "written"
+   },
+   {
+    "title": "Bulk chemical transport",
+    "status": "written"
+   },
+   {
+    "title": "Enterprise coordination and control",
+    "status": "written"
+   }
+  ],
+  "communications": [
+   {
+    "title": "Transport and backbone",
+    "status": "written"
+   },
+   {
+    "title": "Core, switching, routing and signaling",
+    "status": "written"
+   },
+   {
+    "title": "Positioning, navigation and timing reception and distribution",
+    "status": "written"
+   },
+   {
+    "title": "Operations and sector coordination",
+    "status": "written"
+   }
+  ],
+  "transportation": [
+   {
+    "title": "Ways and linehaul",
+    "status": "written"
+   },
+   {
+    "title": "Conveyances and fleet",
+    "status": "written"
+   },
+   {
+    "title": "Traffic management, signaling and control",
+    "status": "written"
+   }
+  ],
+  "financial-services": [
+   {
+    "title": "Market infrastructure",
+    "status": "planned"
+   },
+   {
+    "title": "Core banking",
+    "status": "planned"
+   },
+   {
+    "title": "Sector coordination",
+    "status": "planned"
+   }
+  ],
+  "healthcare": [
+   {
+    "title": "Medical materials",
+    "status": "planned"
+   },
+   {
+    "title": "Public health and laboratory",
+    "status": "planned"
+   },
+   {
+    "title": "Coordination",
+    "status": "planned"
+   }
+  ],
+  "critical-manufacturing": [
+   {
+    "title": "Primary metals and strategic materials",
+    "status": "planned"
+   },
+   {
+    "title": "Precision and electronics",
+    "status": "planned"
+   },
+   {
+    "title": "Coordination",
+    "status": "planned"
+   }
+  ],
+  "emergency-services": [
+   {
+    "title": "Response forces and stations",
+    "status": "written"
+   },
+   {
+    "title": "Emergency management and coordination",
+    "status": "written"
+   }
+  ],
+  "defense-industrial-base": [
+   {
+    "title": "Defense supply chain",
+    "status": "planned"
+   },
+   {
+    "title": "Research, development, test and evaluation",
+    "status": "planned"
+   },
+   {
+    "title": "Coordination",
+    "status": "planned"
+   }
+  ],
+  "food-and-agriculture": [
+   {
+    "title": "Agricultural production",
+    "status": "planned"
+   },
+   {
+    "title": "Storage, distribution and retail",
+    "status": "planned"
+   },
+   {
+    "title": "Food-safety and biosecurity coordination",
+    "status": "planned"
+   }
+  ],
+  "government-facilities": [
+   {
+    "title": "Judicial facilities",
+    "status": "planned"
+   },
+   {
+    "title": "Election infrastructure",
+    "status": "planned"
+   },
+   {
+    "title": "Facility protection and continuity",
+    "status": "planned"
+   }
+  ],
+  "commercial-facilities": [
+   {
+    "title": "Lodging and real estate",
+    "status": "planned"
+   },
+   {
+    "title": "Retail and commerce",
+    "status": "planned"
+   },
+   {
+    "title": "Venue security and emergency coordination",
+    "status": "planned"
+   }
+  ],
+  "information-technology": [
+   {
+    "title": "Infrastructure and compute",
+    "status": "planned"
+   },
+   {
+    "title": "Connectivity and protocols",
+    "status": "planned"
+   },
+   {
+    "title": "Coordination",
+    "status": "planned"
+   }
+  ],
+  "dams": [
+   {
+    "title": "Reservoir and water management",
+    "status": "planned"
+   },
+   {
+    "title": "Locks, levees, navigation and flood-control works",
+    "status": "planned"
+   },
+   {
+    "title": "Dam-safety coordination",
+    "status": "planned"
+   }
+  ]
+ }
+}

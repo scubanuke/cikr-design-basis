@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="355 50 1635 1385" role="img" aria-labelledby="nippT"  style="font-family:'Times New Roman',Times,serif" xmlns:c2pa="http://c2pa.org/manifest">
+<defs>
+<marker id="ab" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12 z" fill="#1f4e9c"/></marker>
+<marker id="at" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L16,8 L0,16 z" fill="#0f6e6e"/></marker>
+<marker id="ak" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L16,8 L0,16 z" fill="#222"/></marker>
+<marker id="ar" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L16,8 L0,16 z" fill="#c0392b"/></marker>
+<marker id="ap" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12 z" fill="#6a2c91"/></marker>
+</defs>
+<rect width="2000" height="1420" fill="#ffffff"/>
+<rect x="810" y="70" width="436" height="90" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="4"/>
+<text x="1028.0" y="112.3" text-anchor="middle" font-size="44" font-weight="bold" fill="#1f4e9c">NIPP</text>
+<text x="1028.0" y="143.3" text-anchor="middle" font-size="19" fill="#222">National Infrastructure Protection Plan</text>
+<rect x="500" y="210" width="432" height="72" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="4"/>
+<text x="716.0" y="243.84" text-anchor="middle" font-size="30" font-weight="bold" fill="#1f4e9c">CIKR</text>
+<text x="716.0" y="274.84000000000003" text-anchor="middle" font-size="19" fill="#222">Critical infrastructure and key resources</text>
+<rect x="1130" y="210" width="420" height="72" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="4"/>
+<text x="1340.0" y="243.84" text-anchor="middle" font-size="30" font-weight="bold" fill="#1f4e9c">SSPs</text>
+<text x="1340.0" y="274.84000000000003" text-anchor="middle" font-size="19" fill="#222">Sector-Specific Plans, one per sector</text>
+<line x1="920" y1="160" x2="770" y2="208" stroke="#1f4e9c" stroke-width="3" marker-end="url(#ab)"/>
+<line x1="1140" y1="160" x2="1290" y2="208" stroke="#1f4e9c" stroke-width="3" marker-end="url(#ab)"/>
+<polyline points="716,282 716,302" stroke="#1f4e9c" stroke-width="3" fill="none"/>
+<line x1="424.0" y1="302" x2="1616.5" y2="302" stroke="#1f4e9c" stroke-width="3"/>
+<line x1="424.0" y1="302" x2="424.0" y2="342" stroke="#1f4e9c" stroke-width="3"/>
+<line x1="1616.5" y1="302" x2="1616.5" y2="342" stroke="#1f4e9c" stroke-width="3"/>
+<line x1="1345" y1="282" x2="1345" y2="302" stroke="#1f4e9c" stroke-width="3" stroke-dasharray="5,5"/>
+<rect x="390.0" y="342" width="68" height="48" rx="4" fill="#fff" stroke="#1f4e9c" stroke-width="3"/>
+<rect x="469.5" y="342" width="68" height="48" rx="4" fill="#fff" stroke="#1f4e9c" stroke-width="3"/>
+<rect x="549.0" y="342" width="68" height="48" rx="4" fill="#fff" stroke="#1f4e9c" stroke-width="3"/>
+<rect x="628.5" y="342" width="68" height="48" rx="4" fill="#1f4e9c" stroke="#1f4e9c" stroke-width="3"/><text x="662.5" y="372" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">one</text>
+<rect x="708.0" y="342" width="68" height="48" rx="4" fill="#fff" stroke="#1f4e9c" stroke-width="3"/>
+<rect x="787.5" y="342" width="68" height="48" rx="4" fill="#fff" stroke="#1f4e9c" stroke-width="3"/>
+<rect x="867.0" y="342" width="68" height="48" rx="4" fill="#fff" stroke="#1f4e9c" stroke-width="3"/>
+<rect x="946.5" y="342" width="68" height="48" rx="4" fill="#fff" stroke="#1f4e9c" stroke-width="3"/>
+<rect x="1026.0" y="342" width="68" height="48" rx="4" fill="#fff" stroke="#1f4e9c" stroke-width="3"/>
+<rect x="1105.5" y="342" width="68" height="48" rx="4" fill="#fff" stroke="#1f4e9c" stroke-width="3"/>
+<rect x="1185.0" y="342" width="68" height="48" rx="4" fill="#fff" stroke="#1f4e9c" stroke-width="3"/>
+<rect x="1264.5" y="342" width="68" height="48" rx="4" fill="#fff" stroke="#1f4e9c" stroke-width="3"/>
+<rect x="1344.0" y="342" width="68" height="48" rx="4" fill="#fff" stroke="#1f4e9c" stroke-width="3"/>
+<rect x="1423.5" y="342" width="68" height="48" rx="4" fill="#fff" stroke="#1f4e9c" stroke-width="3"/>
+<rect x="1503.0" y="342" width="68" height="48" rx="4" fill="#fff" stroke="#1f4e9c" stroke-width="3"/>
+<rect x="1582.5" y="342" width="68" height="48" rx="4" fill="#fff" stroke="#1f4e9c" stroke-width="3"/>
+<text x="1685" y="375" font-size="22" font-weight="bold" fill="#1f4e9c">16 sectors</text>
+<rect x="378" y="428" width="1288" height="78" rx="10" fill="#fbefb0" stroke="#a8780a" stroke-width="4"/>
+<text x="1022" y="465" text-anchor="middle" font-size="30" font-weight="bold" fill="#7a4a00">Foundational Definitions</text>
+<text x="1022" y="494" text-anchor="middle" font-size="18" fill="#222">defined once, for all sectors; every sector framework inherits them by reference and may raise but never lower the line</text>
+<line x1="424.0" y1="510" x2="424.0" y2="532" stroke="#a8780a" stroke-width="3" stroke-dasharray="3,4"/>
+<line x1="503.5" y1="510" x2="503.5" y2="532" stroke="#a8780a" stroke-width="3" stroke-dasharray="3,4"/>
+<line x1="583.0" y1="510" x2="583.0" y2="532" stroke="#a8780a" stroke-width="3" stroke-dasharray="3,4"/>
+<line x1="742.0" y1="510" x2="742.0" y2="532" stroke="#a8780a" stroke-width="3" stroke-dasharray="3,4"/>
+<line x1="821.5" y1="510" x2="821.5" y2="532" stroke="#a8780a" stroke-width="3" stroke-dasharray="3,4"/>
+<line x1="901.0" y1="510" x2="901.0" y2="532" stroke="#a8780a" stroke-width="3" stroke-dasharray="3,4"/>
+<line x1="980.5" y1="510" x2="980.5" y2="532" stroke="#a8780a" stroke-width="3" stroke-dasharray="3,4"/>
+<line x1="1060.0" y1="510" x2="1060.0" y2="532" stroke="#a8780a" stroke-width="3" stroke-dasharray="3,4"/>
+<line x1="1139.5" y1="510" x2="1139.5" y2="532" stroke="#a8780a" stroke-width="3" stroke-dasharray="3,4"/>
+<line x1="1219.0" y1="510" x2="1219.0" y2="532" stroke="#a8780a" stroke-width="3" stroke-dasharray="3,4"/>
+<line x1="1298.5" y1="510" x2="1298.5" y2="532" stroke="#a8780a" stroke-width="3" stroke-dasharray="3,4"/>
+<line x1="1378.0" y1="510" x2="1378.0" y2="532" stroke="#a8780a" stroke-width="3" stroke-dasharray="3,4"/>
+<line x1="1457.5" y1="510" x2="1457.5" y2="532" stroke="#a8780a" stroke-width="3" stroke-dasharray="3,4"/>
+<line x1="1537.0" y1="510" x2="1537.0" y2="532" stroke="#a8780a" stroke-width="3" stroke-dasharray="3,4"/>
+<line x1="1616.5" y1="510" x2="1616.5" y2="532" stroke="#a8780a" stroke-width="3" stroke-dasharray="3,4"/>
+<text x="1700" y="528" font-size="17" font-style="italic" fill="#7a4a00">to all 16 frameworks</text>
+<line x1="662.5" y1="390" x2="662.5" y2="428" stroke="#1f4e9c" stroke-width="3"/>
+<line x1="662.5" y1="506" x2="662.5" y2="576" stroke="#0f6e6e" stroke-width="4" marker-end="url(#at)"/>
+<rect x="470" y="580" width="366" height="86" rx="10" fill="#e2f3f1" stroke="#0f6e6e" stroke-width="4"/>
+<text x="653.0" y="620.42" text-anchor="middle" font-size="30" font-weight="bold" fill="#0f6e6e">Sector Framework</text>
+<text x="653.0" y="651.42" text-anchor="middle" font-size="19" fill="#222">design basis for the sector</text>
+<line x1="653" y1="666" x2="653" y2="796" stroke="#0f6e6e" stroke-width="4" marker-end="url(#at)"/>
+<rect x="458" y="800" width="378" height="102" rx="10" fill="#e2f3f1" stroke="#0f6e6e" stroke-width="4"/>
+<text x="647.0" y="847.94" text-anchor="middle" font-size="32" font-weight="bold" fill="#0f6e6e">Facility Classes</text>
+<text x="647.0" y="879.94" text-anchor="middle" font-size="20" fill="#222">what the sector actually builds</text>
+<path d="M980,782 L980,772 L1950,772 L1950,782" fill="none" stroke="#a8780a" stroke-width="2.5"/>
+<text x="1465" y="764" text-anchor="middle" font-size="20" font-weight="bold" fill="#7a4a00">three-layer progression, per FD-DBL (Design Basis Layers)</text>
+<line x1="836" y1="848" x2="974" y2="848" stroke="#222" stroke-width="4" marker-end="url(#ak)"/>
+<rect x="980" y="804" width="246" height="86" rx="10" fill="#fff" stroke="#222" stroke-width="4"/>
+<text x="1103.0" y="844.42" text-anchor="middle" font-size="32" font-weight="bold" fill="#222">DB</text>
+<text x="1103.0" y="875.42" text-anchor="middle" font-size="19" fill="#222">design basis</text>
+<line x1="1226" y1="848" x2="1304" y2="848" stroke="#222" stroke-width="4" marker-end="url(#ak)"/>
+<rect x="1310" y="804" width="280" height="86" rx="10" fill="#fff" stroke="#222" stroke-width="4"/>
+<text x="1450.0" y="844.42" text-anchor="middle" font-size="32" font-weight="bold" fill="#222">DBA</text>
+<text x="1450.0" y="875.42" text-anchor="middle" font-size="19" fill="#222">design basis accident</text>
+<line x1="1590" y1="848" x2="1664" y2="848" stroke="#222" stroke-width="4" marker-end="url(#ak)"/>
+<rect x="1670" y="800" width="296" height="90" rx="10" fill="#333" stroke="#333" stroke-width="4"/>
+<text x="1818.0" y="842.3" text-anchor="middle" font-size="32" font-weight="bold" fill="#fff">DBA-MA</text>
+<text x="1818.0" y="873.3" text-anchor="middle" font-size="19" fill="#e6e6e6">deliberate military action</text>
+<line x1="566" y1="902" x2="516" y2="994" stroke="#c0392b" stroke-width="4" marker-end="url(#ar)"/>
+<line x1="748" y1="902" x2="842" y2="992" stroke="#c0392b" stroke-width="4" marker-end="url(#ar)"/>
+<rect x="388" y="1000" width="302" height="106" rx="10" fill="#fdebd8" stroke="#c45a10" stroke-width="4"/>
+<text x="539.0" y="1049.82" text-anchor="middle" font-size="30" font-weight="bold" fill="#c0392b">Use Cases</text>
+<text x="539.0" y="1080.82" text-anchor="middle" font-size="19" fill="#222">anticipated: what we postulate</text>
+<rect x="740" y="996" width="320" height="106" rx="10" fill="#fbe2e2" stroke="#c0392b" stroke-width="4"/>
+<text x="900.0" y="1045.82" text-anchor="middle" font-size="30" font-weight="bold" fill="#c0392b">Reference Events</text>
+<text x="900.0" y="1076.82" text-anchor="middle" font-size="19" fill="#222">actual: what happened</text>
+<path d="M560,1350 C480,1350 470,1280 525,1262 C500,1200 580,1172 630,1200 C650,1150 760,1145 790,1190 C830,1160 910,1185 900,1240 C950,1255 940,1340 870,1345 C860,1385 780,1390 740,1365 C700,1395 610,1390 560,1350 Z" fill="#ececec" stroke="#222" stroke-width="4"/>
+<text x="700" y="1288" text-anchor="middle" font-size="40" font-weight="bold" font-style="italic" fill="#222">Life Happens</text>
+<text x="700" y="1326" text-anchor="middle" font-size="20" fill="#222">the world tests the postulate</text>
+<line x1="508" y1="1106" x2="540" y2="1210" stroke="#c0392b" stroke-width="4" marker-end="url(#ar)"/>
+<path d="M906,1262 C990,1220 980,1150 944,1110" fill="none" stroke="#c0392b" stroke-width="4" marker-end="url(#ar)"/>
+<polyline points="1060,1048 1106,1048 1106,898" fill="none" stroke="#c0392b" stroke-width="4" stroke-dasharray="10,8" marker-end="url(#ar)"/>
+<text x="1128" y="968" font-size="20" font-weight="bold" fill="#c0392b">operating experience</text>
+<text x="1128" y="996" font-size="20" font-weight="bold" fill="#c0392b">revises the design basis</text>
+<rect x="1360" y="1130" width="32" height="26" fill="#fbefb0" stroke="#a8780a" stroke-width="3"/>
+<text x="1408" y="1151" font-size="20" fill="#222">Foundational Definitions (cross-sector)</text>
+<rect x="1360" y="1174" width="32" height="26" fill="#e8eef8" stroke="#1f4e9c" stroke-width="3"/>
+<text x="1408" y="1195" font-size="20" fill="#222">National structure (existing)</text>
+<rect x="1360" y="1218" width="32" height="26" fill="#e2f3f1" stroke="#0f6e6e" stroke-width="3"/>
+<text x="1408" y="1239" font-size="20" fill="#222">This body of work</text>
+<line x1="1360" y1="1363" x2="1394" y2="1363" stroke="#1f4e9c" stroke-width="4" stroke-dasharray="7,5"/>
+<text x="1408" y="1371" font-size="20" fill="#222">One SSP per sector</text>
+<line x1="1360" y1="1407" x2="1394" y2="1407" stroke="#c0392b" stroke-width="4" stroke-dasharray="7,5"/>
+<text x="1408" y="1415" font-size="20" fill="#222">Feedback from real events</text>
+<rect x="1360" y="1262" width="32" height="26" fill="#fdebd8" stroke="#c45a10" stroke-width="3"/>
+<text x="1408" y="1283" font-size="20" fill="#222">Use cases (what we postulate)</text>
+<rect x="1360" y="1306" width="32" height="26" fill="#fbe2e2" stroke="#c0392b" stroke-width="3"/>
+<text x="1408" y="1327" font-size="20" fill="#222">Reference events (what happened)</text>
+</svg>

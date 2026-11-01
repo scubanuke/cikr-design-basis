@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="dblT dblD" style="font-family:Georgia,'Times New Roman',serif">
+<title id="dblT">What is a design basis? Three layers of analysis</title>
+<desc id="dblD">Simplified from Figure 1 of FD-DBL, Design Basis Layers. The function and the requirement to perform it safely are kept through three layers: design basis, design basis accident and deliberate military action. Each layer adds conditions and changes what counts as success. As conditions widen, the designs that meet them narrow.</desc>
+<defs><marker id="ah" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L14,7 L0,14 z" fill="#111418"/></marker></defs>
+<rect x="0" y="0" width="1200" height="720" fill="#FFFFFF"/>
+<rect x="20" y="20" width="1160" height="74" rx="8" fill="#0A6B3D"/>
+<text x="600" y="52" text-anchor="middle" font-size="24" font-weight="bold" fill="#FFFFFF">Kept through every layer: the function the facility is built to do</text>
+<text x="600" y="80" text-anchor="middle" font-size="20" fill="#FFFFFF">and the requirement that whatever it does, it does safely</text>
+<rect x="20" y="120" width="360" height="430" rx="10" fill="#E8EEF9" stroke="#0B3D91" stroke-width="4"/>
+<rect x="20" y="120" width="360" height="58" rx="10" fill="#0B3D91"/><rect x="20" y="160" width="360" height="18" fill="#0B3D91"/>
+<text x="200" y="158" text-anchor="middle" font-size="23" font-weight="bold" fill="#FFFFFF">Design basis</text>
+<text x="40" y="212" font-size="15" font-weight="bold" letter-spacing="2" fill="#0B3D91">WHAT IT ADDS</text>
+<text x="40" y="240" font-size="19" fill="#111418">The function: what the facility is</text>
+<text x="40" y="265" font-size="19" fill="#111418">built to do, the people, process</text>
+<text x="40" y="290" font-size="19" fill="#111418">and technology that deliver it,</text>
+<text x="40" y="315" font-size="19" fill="#111418">and the limits it works within.</text>
+<line x1="40" y1="363" x2="360" y2="363" stroke="#0B3D91" stroke-width="2"/>
+<text x="40" y="389" font-size="15" font-weight="bold" letter-spacing="2" fill="#0B3D91">SUCCESS</text>
+<text x="40" y="417" font-size="19" fill="#111418" font-weight="bold">The function is delivered within</text>
+<text x="40" y="442" font-size="19" fill="#111418" font-weight="bold">its operating limits.</text>
+<line x1="384" y1="335" x2="416" y2="335" stroke="#111418" stroke-width="4" marker-end="url(#ah)"/>
+<rect x="420" y="120" width="360" height="430" rx="10" fill="#FFF1E6" stroke="#B34700" stroke-width="4"/>
+<rect x="420" y="120" width="360" height="58" rx="10" fill="#B34700"/><rect x="420" y="160" width="360" height="18" fill="#B34700"/>
+<text x="600" y="158" text-anchor="middle" font-size="23" font-weight="bold" fill="#FFFFFF">Design basis accident</text>
+<text x="440" y="212" font-size="15" font-weight="bold" letter-spacing="2" fill="#B34700">WHAT IT ADDS</text>
+<text x="440" y="240" font-size="19" fill="#111418">Accidents drawn from experience:</text>
+<text x="440" y="265" font-size="19" fill="#111418">fire, flood, storm, a failed</text>
+<text x="440" y="290" font-size="19" fill="#111418">component, an operator’s error, a</text>
+<text x="440" y="315" font-size="19" fill="#111418">flawed process.</text>
+<line x1="440" y1="363" x2="760" y2="363" stroke="#B34700" stroke-width="2"/>
+<text x="440" y="389" font-size="15" font-weight="bold" letter-spacing="2" fill="#B34700">SUCCESS</text>
+<text x="440" y="417" font-size="19" fill="#111418" font-weight="bold">Recover to normal operation, or</text>
+<text x="440" y="442" font-size="19" fill="#111418" font-weight="bold">reach a safe, known condition and</text>
+<text x="440" y="467" font-size="19" fill="#111418" font-weight="bold">recover from it with outside help.</text>
+<line x1="784" y1="335" x2="816" y2="335" stroke="#111418" stroke-width="4" marker-end="url(#ah)"/>
+<rect x="820" y="120" width="360" height="430" rx="10" fill="#FBE9EA" stroke="#A4161A" stroke-width="4"/>
+<rect x="820" y="120" width="360" height="58" rx="10" fill="#A4161A"/><rect x="820" y="160" width="360" height="18" fill="#A4161A"/>
+<text x="1000" y="158" text-anchor="middle" font-size="23" font-weight="bold" fill="#FFFFFF">Deliberate military action</text>
+<text x="840" y="212" font-size="15" font-weight="bold" letter-spacing="2" fill="#A4161A">WHAT IT ADDS</text>
+<text x="840" y="240" font-size="19" fill="#111418">An adversary who chooses the</text>
+<text x="840" y="265" font-size="19" fill="#111418">moment, keeps coming, aims at what</text>
+<text x="840" y="290" font-size="19" fill="#111418">matters most and blocks repair and</text>
+<text x="840" y="315" font-size="19" fill="#111418">outside help.</text>
+<line x1="840" y1="363" x2="1160" y2="363" stroke="#A4161A" stroke-width="2"/>
+<text x="840" y="389" font-size="15" font-weight="bold" letter-spacing="2" fill="#A4161A">SUCCESS</text>
+<text x="840" y="417" font-size="19" fill="#111418" font-weight="bold">Reach and hold a protected state</text>
+<text x="840" y="442" font-size="19" fill="#111418" font-weight="bold">using only what is at the</text>
+<text x="840" y="467" font-size="19" fill="#111418" font-weight="bold">facility, for as long as the</text>
+<text x="840" y="492" font-size="19" fill="#111418" font-weight="bold">attack lasts.</text>
+<line x1="40" y1="600" x2="1150" y2="600" stroke="#111418" stroke-width="4" marker-end="url(#ah)"/>
+<text x="40" y="590" font-size="20" font-weight="bold" fill="#111418">The conditions the design must withstand widen</text>
+<line x1="1160" y1="660" x2="50" y2="660" stroke="#111418" stroke-width="4" marker-end="url(#ah)"/>
+<text x="1160" y="650" text-anchor="end" font-size="20" font-weight="bold" fill="#111418">The designs that meet them narrow</text>
+<text x="1180" y="705" text-anchor="end" font-size="14" fill="#3D4550">Simplified from FD-DBL (Design Basis Layers), Figure 1. Where this picture and the text differ, the text governs.</text>
+</svg>
