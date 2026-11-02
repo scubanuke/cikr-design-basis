@@ -23,6 +23,7 @@
 <p class="sowhat"><strong>So what?</strong> Paychecks, pensions, fuel and food purchases all settle through a few payment systems. The design treats the power and communications those systems run on as part of the problem, and asks how ordinary people keep paying through a long outage.</p>
 <div class="deps"><div><span class="lbl">Depends on</span><br><a href="../sectors/communications.html">Communications</a>, <a href="../sectors/energy.html">Energy</a></div><div><span class="lbl">Depended on by</span><br>All other sectors</div></div>
 
+<p class="prose note">The framework and facility class set the design basis. The last two cards keep evidence and hypothesis apart: <strong>Observed</strong> is a real event and what it showed; <strong>Postulated</strong> is a scenario the design must withstand.</p>
 <div class="cards">
 <article class="card sf">
 <span class="kind">Sector framework</span>
@@ -34,16 +35,16 @@
 <h3>Payment and Settlement</h3><p class="des">DBA-FIN-PS-FC1</p>
 <p>A facility class takes the sector framework down to one kind of facility. This one is payment and settlement: the systems and bank connections through which money moves between institutions and a payment becomes final. It is a function, not a building. The class names two ways to fail: a payment that cannot settle in time, and a payment that settles on a false instruction. It sets out how a system keeps settling when power, networks and timing are lost, how instructions are checked before they become final, and how records are verified before work resumes. It declares what remains beyond its design.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-FIN-PS-FC1_Payment_and_Settlement_v0_2.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
-</article><article class="card uc">
-<span class="kind">Use case</span>
-<h3>Settlement Through a Campaign on the Grid and Communications</h3><p class="des">DBA-FIN-UC-1</p>
-<p>A use case runs a postulated scenario forward through a facility class to see where the design holds and where it does not. Here a country&#x27;s power and communications are struck for months, and an adversary also corrupts a major bank&#x27;s payment records and instructions while the settlement system keeps running from reserve sites. The case finds the plan consistent with the real wartime record, though whether settlement holds through the hardest phases remains in question, and shows that a check before payments become final can hold back large or unusual instructions. It leaves open how many times a day the system can verify its records and resume, and how it tells deliberate interference from ordinary outage.</p>
-<div class="foot"><p class="onreq"><a href="../request.html">This document is available to defenders and regulators on request.</a></p><p class="note">Summary card only. Use cases are not published.</p></div>
 </article><article class="card re">
-<span class="kind">Reference event</span>
+<span class="kind">Observed · Reference event</span>
 <h3>Ukraine&#x27;s Payment System Through the War</h3><p class="des">DBA-FIN-RE-3</p>
 <p>A reference event reads a real event back through the design basis to ask whether the method was sufficient. Ukraine&#x27;s central bank reports that since the full-scale invasion of February 2022 its main interbank payment system has kept working, from reserve sites, through strikes on the electricity system that began in October 2022. Banks were allowed to use computing hosted abroad, and a network of branches with their own power, more than 2,370 by July 2023, served the public. All four marks of military action are established on the record. The design held at the center. Public access held only because that branch network was built, and the permission to use computing abroad came only after the war began.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-FIN-RE-3_Ukraines_Payment_System_Through_the_War_v0_2.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
+</article><article class="card uc">
+<span class="kind">Postulated · Use case</span>
+<h3>Settlement Through a Campaign on the Grid and Communications</h3><p class="des">DBA-FIN-UC-1</p>
+<p>A use case runs a postulated scenario forward through a facility class to see where the design holds and where it does not. Here a country&#x27;s power and communications are struck for months, and an adversary also corrupts a major bank&#x27;s payment records and instructions while the settlement system keeps running from reserve sites. The case finds the plan consistent with the real wartime record, though whether settlement holds through the hardest phases remains in question, and shows that a check before payments become final can hold back large or unusual instructions. It leaves open how many times a day the system can verify its records and resume, and how it tells deliberate interference from ordinary outage.</p>
+<div class="foot"><p class="onreq"><a href="../request.html">This document is available to defenders and regulators on request.</a></p><p class="note">Summary card only. Use cases are not published.</p></div>
 </article>
 </div>
 

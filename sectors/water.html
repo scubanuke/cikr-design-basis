@@ -23,6 +23,7 @@
 <p class="sowhat"><strong>So what?</strong> Nearly everything a water system does runs on electricity, and nearly everything a town does runs on water: hospitals, dialysis, firefighting, food. The design treats both directions as part of the problem, not as someone else&#x27;s.</p>
 <div class="deps"><div><span class="lbl">Depends on</span><br><a href="../sectors/energy.html">Energy</a>, <a href="../sectors/chemical.html">Chemical</a></div><div><span class="lbl">Depended on by</span><br><a href="../sectors/healthcare.html">Healthcare and Public Health</a>, <a href="../sectors/emergency-services.html">Emergency Services</a>, <a href="../sectors/energy.html">Energy</a>, Nuclear <span class="note">(in development)</span>, <a href="../sectors/food-and-agriculture.html">Food and Agriculture</a></div></div>
 
+<p class="prose note">The framework and facility class set the design basis. The last two cards keep evidence and hypothesis apart: <strong>Observed</strong> is a real event and what it showed; <strong>Postulated</strong> is a scenario the design must withstand.</p>
 <div class="cards">
 <article class="card sf">
 <span class="kind">Sector framework</span>
@@ -34,16 +35,16 @@
 <h3>Water Treatment Plant</h3><p class="des">DBA-W-FC1</p>
 <p>A facility class takes the sector framework down to one kind of facility. This one is the treatment plant, where river or well water is made safe to drink, together with the chemical storage that disinfection depends on. A treatment plant carries two dangers at once: losing disinfection, which reaches every tap downstream, and a release of stored treatment chemicals, which reaches the neighborhood around the plant. The class sets out how a plant should settle into a safe condition on its own, with only a small crew, when it loses its networked controls and outside support, and it states plainly what remains beyond its design.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-W-FC1_Water_Treatment_Plant_v0_6.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
-</article><article class="card uc">
-<span class="kind">Use case</span>
-<h3>Area-Denial Attack on a Large Surface-Water Treatment Plant</h3><p class="des">DBA-W-UC-1</p>
-<p>A use case runs a postulated attack forward through a facility class to see where the design holds and where it does not. Here a capable adversary strikes a large treatment plant&#x27;s chemical storage, forcing the crew to leave, and interferes with the plant&#x27;s controls at the same time. The case shows that a plant able to reach a safe state by itself defeats the control-system half of the attack and keeps the drinking-water consequence inside the fence. The chemical release is different. It crosses the fence line, and there the plant&#x27;s design hands off to community emergency planning.</p>
-<div class="foot"><p class="onreq"><a href="../request.html">This document is available to defenders and regulators on request.</a></p><p class="note">Summary card only. Use cases are not published.</p></div>
 </article><article class="card re">
-<span class="kind">Reference event</span>
+<span class="kind">Observed · Reference event</span>
 <h3>Minnesota Water Campaign</h3><p class="des">DBA-W-RE-1</p>
 <p>A reference event reads a real event back through the design basis to ask whether the method was sufficient. In late July 2026 a coordinated cyber attack disrupted controls at more than thirty Minnesota water and wastewater systems, the first-reported part of a campaign later counted at about a hundred facilities in at least twelve states. In the Minnesota cases officials said drinking-water quality was not affected, and at Braham crews restored the plant in about two hours. The event showed three of the four marks of military action; the fourth, denial, was absent, because crews could reach their plants. No official attribution has been made, and the record remains open.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-W-RE-1_Minnesota_Water_Campaign_v0_8.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
+</article><article class="card uc">
+<span class="kind">Postulated · Use case</span>
+<h3>Area-Denial Attack on a Large Surface-Water Treatment Plant</h3><p class="des">DBA-W-UC-1</p>
+<p>A use case runs a postulated attack forward through a facility class to see where the design holds and where it does not. Here a capable adversary strikes a large treatment plant&#x27;s chemical storage, forcing the crew to leave, and interferes with the plant&#x27;s controls at the same time. The case shows that a plant able to reach a safe state by itself defeats the control-system half of the attack and keeps the drinking-water consequence inside the fence. The chemical release is different. It crosses the fence line, and there the plant&#x27;s design hands off to community emergency planning.</p>
+<div class="foot"><p class="onreq"><a href="../request.html">This document is available to defenders and regulators on request.</a></p><p class="note">Summary card only. Use cases are not published.</p></div>
 </article>
 </div>
 

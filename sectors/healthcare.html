@@ -23,6 +23,7 @@
 <p class="sowhat"><strong>So what?</strong> A hospital makes nothing itself, and its emergency department must screen everyone who arrives. It runs on power, water and communications from elsewhere, so the design asks that it keep life-sustaining care going on its own, for a stated time, when those fail.</p>
 <div class="deps"><div><span class="lbl">Depends on</span><br><a href="../sectors/water.html">Water</a>, <a href="../sectors/energy.html">Energy</a>, <a href="../sectors/communications.html">Communications</a>, <a href="../sectors/transportation.html">Transportation</a>, <a href="../sectors/chemical.html">Chemical</a></div><div><span class="lbl">Depended on by</span><br><a href="../sectors/emergency-services.html">Emergency Services</a></div></div>
 
+<p class="prose note">The framework and facility class set the design basis. The last two cards keep evidence and hypothesis apart: <strong>Observed</strong> is a real event and what it showed; <strong>Postulated</strong> is a scenario the design must withstand.</p>
 <div class="cards">
 <article class="card sf">
 <span class="kind">Sector framework</span>
@@ -34,16 +35,16 @@
 <h3>Care Delivery</h3><p class="des">DBA-HPH-CD-FC1</p>
 <p>A facility class takes the sector framework down to one kind of facility. This one is mainly the hospital, with dialysis and long-term care also in its scope. It holds people who cannot leave and runs on power, water, gas and communications from outside. The class names two dangers: losing care for patients already inside, and a surge larger than the hospital can carry through to definitive care, measured by critically injured patients per hour, not by beds. It asks whether a hospital can hold life-sustaining care on its own, and it declares that a direct strike can destroy any part of a hospital, and that a campaign outlasting its endurance ends its continuity.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-HPH-CD-FC1_Care_Delivery_v0_2.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
-</article><article class="card uc">
-<span class="kind">Use case</span>
-<h3>A Mass-Casualty Surge During a Grid and Communications Outage</h3><p class="des">DBA-HPH-UC-1</p>
-<p>A use case runs a postulated attack forward through a facility class to see where the design holds and where it does not. Here a capable adversary denies a region its electric grid and public communications, and a mass-casualty event sends many injured to a community hospital and a trauma center with no warning. The case shows the design largely holds: hospitals that triage at the door and plan for patients arriving without notice can receive them when no call comes. It also finds gaps: the class does not yet say what surge power capacity is needed, how staff are recalled when no message can be sent, or by what path patient counts are reported.</p>
-<div class="foot"><p class="onreq"><a href="../request.html">This document is available to defenders and regulators on request.</a></p><p class="note">Summary card only. Use cases are not published.</p></div>
 </article><article class="card re">
-<span class="kind">Reference event</span>
+<span class="kind">Observed · Reference event</span>
 <h3>Loss of Power at Memorial Medical Center</h3><p class="des">DBA-HPH-RE-2</p>
 <p>A reference event reads a real event back through the design basis to ask whether the method was sufficient. During Hurricane Katrina in August 2005, Memorial Medical Center in New Orleans lost its power. The hospital stood below sea level, a 2004 warning about flooding had not been acted on, and its plan assumed backup power would last three days; it lasted less than two. Evacuation, including from a long-unused helipad, continued until the evening of 1 September. Experts in later litigation disagree on why the power failed. None of the four marks of military action was present. Read against the event, the hospital class held, with gaps, and nothing in the event fell outside it.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-HPH-RE-2_Loss_of_Power_at_Memorial_Medical_Center_v0_1.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
+</article><article class="card uc">
+<span class="kind">Postulated · Use case</span>
+<h3>A Mass-Casualty Surge During a Grid and Communications Outage</h3><p class="des">DBA-HPH-UC-1</p>
+<p>A use case runs a postulated attack forward through a facility class to see where the design holds and where it does not. Here a capable adversary denies a region its electric grid and public communications, and a mass-casualty event sends many injured to a community hospital and a trauma center with no warning. The case shows the design largely holds: hospitals that triage at the door and plan for patients arriving without notice can receive them when no call comes. It also finds gaps: the class does not yet say what surge power capacity is needed, how staff are recalled when no message can be sent, or by what path patient counts are reported.</p>
+<div class="foot"><p class="onreq"><a href="../request.html">This document is available to defenders and regulators on request.</a></p><p class="note">Summary card only. Use cases are not published.</p></div>
 </article>
 </div>
 

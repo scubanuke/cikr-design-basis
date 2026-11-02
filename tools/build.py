@@ -126,14 +126,16 @@ def deplinks(text, r):
 def sector_page(slug, name, d):
     r = '../'
     cards = []
-    for c in d['cards']:
+    order = {'sf': 0, 'fc': 1, 're': 2, 'uc': 3}
+    for c in sorted(d['cards'], key=lambda c: order[KIND[c['kind']]]):
         k = KIND[c['kind']]
+        label = {'re': 'Observed · Reference event', 'uc': 'Postulated · Use case'}.get(k, c['kind'])
         if k == 'uc':
             foot = '<p class="onreq"><a href="%srequest.html">%s</a></p><p class="note">Summary card only. Use cases are not published.</p>' % (r, ON_REQUEST)
         else:
             foot = '<a href="%s%s.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, %s · <a href="https://doi.org/%s">doi:%s</a></span>' % (PDF_BASE, e(c['src']), EDITION_DATE, VERSION_DOI, VERSION_DOI)
         cards.append(f'''<article class="card {k}">
-<span class="kind">{e(c['kind'])}</span>
+<span class="kind">{e(label)}</span>
 <h3>{e(c['title'])}</h3><p class="des">{e(c['des'])}</p>
 <p>{inline(c['body'])}</p>
 <div class="foot">{foot}</div>
@@ -160,6 +162,7 @@ def sector_page(slug, name, d):
 <p class="sowhat"><strong>So what?</strong> {inline(d['sowhat'])}</p>
 <div class="deps"><div><span class="lbl">Depends on</span><br>{deplinks(d['depends'], r)}</div><div><span class="lbl">Depended on by</span><br>{deplinks(d['dependedby'], r)}</div></div>
 {extra}
+<p class="prose note">The framework and facility class set the design basis. The last two cards keep evidence and hypothesis apart: <strong>Observed</strong> is a real event and what it showed; <strong>Postulated</strong> is a scenario the design must withstand.</p>
 <div class="cards">
 {''.join(cards)}
 </div>
@@ -180,7 +183,7 @@ def home():
 <figure><img src="assets/figures/nipp-to-life-happens.svg" alt="Diagram: the National Infrastructure Protection Plan defines sixteen sectors. The Foundational Definitions sit under all of them. Each sector framework leads to facility classes, which lead to use cases (what we postulate) and reference events (what happened), and to a progression from design basis to design basis accident to deliberate military action. Real events feed back to revise the design basis.">
 <figcaption>From NIPP to Life Happens: how to read everything on this site. Each sector page shows one example of each layer.</figcaption></figure>
 <h2 id="sectors">The sectors</h2>
-<p class="prose">Choose a sector. Each page gives a one-line answer to “so what?”, the sectors it leans on and those that lean on it, and four cards: the sector framework, one facility class, one use case and one real event.</p>
+<p class="prose">Choose a sector. Each page gives a one-line answer to “so what?”, the sectors it leans on and those that lean on it, and four cards: the sector framework, one facility class, one real event (observed) and one use case (postulated).</p>
 <nav class="tree" aria-label="Sectors">{tree}</nav>
 <h2>Four ways in</h2>
 <ul class="prose">{readers}</ul>

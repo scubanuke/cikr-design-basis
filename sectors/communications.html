@@ -23,6 +23,7 @@
 <p class="sowhat"><strong>So what?</strong> Emergency calls, hospital links and the grid&#x27;s own controls all travel over networks that run down quickly when the power fails. The design treats a network failure as a condition every other sector must be built to work through, not as a side issue.</p>
 <div class="deps"><div><span class="lbl">Depends on</span><br><a href="../sectors/energy.html">Energy</a></div><div><span class="lbl">Depended on by</span><br><a href="../sectors/emergency-services.html">Emergency Services</a>, <a href="../sectors/healthcare.html">Healthcare and Public Health</a>, <a href="../sectors/energy.html">Energy</a>, <a href="../sectors/financial-services.html">Financial Services</a></div></div>
 
+<p class="prose note">The framework and facility class set the design basis. The last two cards keep evidence and hypothesis apart: <strong>Observed</strong> is a real event and what it showed; <strong>Postulated</strong> is a scenario the design must withstand.</p>
 <div class="cards">
 <article class="card sf">
 <span class="kind">Sector framework</span>
@@ -34,16 +35,16 @@
 <h3>Access and Edge</h3><p class="des">DBA-COMM-AC-FC2</p>
 <p>A facility class takes the sector framework down to one kind of facility. This one covers the access and edge of the network: the cell sites, central offices, local lines and broadcast transmitters where service is handed to people and to the facilities that depend on it. It is the part of the network that runs out of power first when the grid fails. The class sets out two measures, how long a site keeps going on its own power and how much service survives, and asks that every 911 center and hospital keep at least one working path. It also states what protection cannot do against a determined attacker.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-COMM-AC-FC2_Access_and_Edge_v0_4.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
-</article><article class="card uc">
-<span class="kind">Use case</span>
-<h3>Grid Denied and Critical Access Sites Struck</h3><p class="des">DBA-COMM-UC-2</p>
-<p>A use case runs a postulated attack forward through a facility class to see where the design holds and where it does not. Here a capable adversary denies the grid across an area and strikes the facilities that serve its emergency services and main hospital. The case shows that power switching at the sites, which acts on conditions measured at each site and cannot be reached from outside, holds. It also shows that backup paths which each pass their own test can share something hidden, leaving both the 911 center and the hospital with none. Past a point, the class hands the problem to emergency communications that do not use the public network.</p>
-<div class="foot"><p class="onreq"><a href="../request.html">This document is available to defenders and regulators on request.</a></p><p class="note">Summary card only. Use cases are not published.</p></div>
 </article><article class="card re">
-<span class="kind">Reference event</span>
+<span class="kind">Observed · Reference event</span>
 <h3>CenturyLink Outage</h3><p class="des">DBA-COMM-RE-13</p>
 <p>A reference event reads a real event back through the design basis to ask whether the method was sufficient. In December 2018 a fault in one piece of equipment set off a flood of repeated internal messages across CenturyLink&#x27;s long-distance network. Service, including 911 for some seventeen million customers in twenty-nine states, was disrupted for almost thirty-seven hours. The event was not military action: nobody chose it, no actor was present, and nothing was aimed. Denial was present only in effect. Two regulators differ on where responsibility for the 911 losses in Washington State lies, and the instrument makes no finding between them.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-COMM-RE-13_CenturyLink_Outage_v0_2.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
+</article><article class="card uc">
+<span class="kind">Postulated · Use case</span>
+<h3>Grid Denied and Critical Access Sites Struck</h3><p class="des">DBA-COMM-UC-2</p>
+<p>A use case runs a postulated attack forward through a facility class to see where the design holds and where it does not. Here a capable adversary denies the grid across an area and strikes the facilities that serve its emergency services and main hospital. The case shows that power switching at the sites, which acts on conditions measured at each site and cannot be reached from outside, holds. It also shows that backup paths which each pass their own test can share something hidden, leaving both the 911 center and the hospital with none. Past a point, the class hands the problem to emergency communications that do not use the public network.</p>
+<div class="foot"><p class="onreq"><a href="../request.html">This document is available to defenders and regulators on request.</a></p><p class="note">Summary card only. Use cases are not published.</p></div>
 </article>
 </div>
 

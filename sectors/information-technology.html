@@ -23,6 +23,7 @@
 <p class="sowhat"><strong>So what?</strong> Almost every organization runs on software it did not write, so one bad update can reach hospitals, call centers and banks at once. The design asks that no vendor&#x27;s update be able to change a facility&#x27;s safety controls without the facility&#x27;s own deliberate act.</p>
 <div class="deps"><div><span class="lbl">Depends on</span><br><a href="../sectors/energy.html">Energy</a>, <a href="../sectors/communications.html">Communications</a>, <a href="../sectors/critical-manufacturing.html">Critical Manufacturing</a>, <a href="../sectors/transportation.html">Transportation</a></div><div><span class="lbl">Depended on by</span><br>All other sectors</div></div>
 
+<p class="prose note">The framework and facility class set the design basis. The last two cards keep evidence and hypothesis apart: <strong>Observed</strong> is a real event and what it showed; <strong>Postulated</strong> is a scenario the design must withstand.</p>
 <div class="cards">
 <article class="card sf">
 <span class="kind">Sector framework</span>
@@ -34,16 +35,16 @@
 <h3>Software, Hardware and Product Supply Chain</h3><p class="des">DBA-IT-SW-FC3</p>
 <p>A facility class takes the sector framework down to one kind of facility. Here it is not a building but a pathway: the making and delivery of the software products that other sectors install and keep updated. The class sets out that a vendor&#x27;s signature shows where an update came from, not that it is sound, so what ships must be shown to match what was reviewed, and each customer keeps authority over what enters its own systems. It calls for updates released in stages, so a mistake reaches few machines before it is seen, and for recovery that does not depend on the channel that failed. It also declares what remains beyond its design when an adversary is deliberate.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-IT-SW-FC3_Software_Hardware_and_Product_Supply_Chain_v0_2.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
-</article><article class="card uc">
-<span class="kind">Use case</span>
-<h3>A Capability Pre-Positioned in a Trusted Product</h3><p class="des">DBA-IT-UC-1</p>
-<p>A use case runs a postulated scenario forward through a facility class to see where the design holds and where it does not. Here a capable adversary quietly places a hidden capability in a widely trusted software product, then uses it during an attack on the power grid to disable the computers of hospitals, emergency call centers and utilities together. The case shows that where facilities kept their safety and treatment controls out of the product&#x27;s reach, the damage stops at the computers and those controls keep protecting. Recovery is the weak point. Rebuilding by a facility&#x27;s own staff was rehearsed with networks up and help available, and those conditions would be gone.</p>
-<div class="foot"><p class="onreq"><a href="../request.html">This document is available to defenders and regulators on request.</a></p><p class="note">Summary card only. Use cases are not published.</p></div>
 </article><article class="card re">
-<span class="kind">Reference event</span>
+<span class="kind">Observed · Reference event</span>
 <h3>Faulty Content Update of 19 July 2024</h3><p class="des">DBA-IT-RE-2</p>
 <p>A reference event reads a real event back through the design basis to ask whether the method was sufficient. On 19 July 2024 a faulty content update to a widely used security product stopped about 8.5 million computers. The vendor reversed it after 78 minutes, but many machines had to be repaired by hand. Some emergency call centers fell back to taking calls by hand, and at a House hearing members described disruption at hospitals, banks and airlines. It was an accident, not an attack, and the reading makes no finding of fault. Read against the event, the class held, with gaps, among them that recovery should be measured to the service, not the machine.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-IT-RE-2_Faulty_Content_Update_of_19_July_2024_v0_1.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
+</article><article class="card uc">
+<span class="kind">Postulated · Use case</span>
+<h3>A Capability Pre-Positioned in a Trusted Product</h3><p class="des">DBA-IT-UC-1</p>
+<p>A use case runs a postulated scenario forward through a facility class to see where the design holds and where it does not. Here a capable adversary quietly places a hidden capability in a widely trusted software product, then uses it during an attack on the power grid to disable the computers of hospitals, emergency call centers and utilities together. The case shows that where facilities kept their safety and treatment controls out of the product&#x27;s reach, the damage stops at the computers and those controls keep protecting. Recovery is the weak point. Rebuilding by a facility&#x27;s own staff was rehearsed with networks up and help available, and those conditions would be gone.</p>
+<div class="foot"><p class="onreq"><a href="../request.html">This document is available to defenders and regulators on request.</a></p><p class="note">Summary card only. Use cases are not published.</p></div>
 </article>
 </div>
 
