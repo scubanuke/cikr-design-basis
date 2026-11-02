@@ -1,0 +1,81 @@
+{
+ "intro": "What the real event showed the design basis must account for. These are the event's findings, and each line says where the series has taken them up.",
+ "sources": "Project 0 draft of 2 Nov 2026 as amended by Project 11 (Note 2026-11-02, Changes 1-4), Project 9 (Return Note 2026-11-02) and Project 8 (Note 2026-11-02). Healthcare phrase confirmed by Project 11 (Note 2026-11-02c).",
+ "lines": {
+  "water": {
+   "f": "F-1, F-2, F-8",
+   "t": "The design basis must treat what operators see on their screens as something that can be falsified, test whether defenses that look separate rest on one shared foundation, and count configuration shared across many utilities as a single exposure for the whole sector.",
+   "c": "The Water Sector Framework has carried all three since its v1.6, and Edition 1 holds them."
+  },
+  "communications": {
+   "f": "F-1, F-3, F-4",
+   "t": "A network's reach counts every function by which one element can reach the others, including functions no one uses. A failure that feeds itself must be stoppable at every node, and an operations center that cannot see its network has, for that time, lost it.",
+   "c": "Operations and Coordination, another class of this sector, took these up before Edition 1."
+  },
+  "chemical": {
+   "f": "F-1, F-2, F-4",
+   "t": "One flood took every layer of protection at once, so backup must be independent of the common cause. The time to decide ran out before the flood arrived, and the plant's own worst case was not the event that happened.",
+   "c": "Chemical Production and Synthesis, another class of this sector, took these up before Edition 1."
+  },
+  "transportation": {
+   "f": "F-1, F-2, F-3, F-7",
+   "t": "The spans at risk must be found first, and pier protection is credited only for what it can actually stop. The assessment is renewed when the vessels change, and replacement time is the time to build the bridge current standards require.",
+   "c": "Ways and Linehaul, another class of this sector, took these up before Edition 1."
+  },
+  "emergency-services": {
+   "f": "F-1, F-2, F-3",
+   "t": "Detection of a silent failure must survive the loss of the power it watches. Backup power is credited only once it has been shown to run, and diversity of routes is verified against the physical route.",
+   "c": "The facility class shown here has carried all three since before Edition 1, and Edition 1 holds them."
+  },
+  "dams": {
+   "f": "F-1, F-3, F-4",
+   "t": "Once a dam is held by a party to an armed conflict, its pool is the holder's, not the permit's. The design basis does not wait on attribution, and the warning must reach a valley under another authority.",
+   "c": "The facility class shown here takes these up in a later revision."
+  },
+  "healthcare": {
+   "f": "F-1, F-2, F-3, F-4",
+   "t": "A hospital's plan must cover the failure of its own emergency power system and state the site's height against the flood. The means of evacuation are named and protected as the emergency power system is, and a tenant's patients are inside the hospital's plan.",
+   "c": "The facility class shown here takes these up in a later revision."
+  },
+  "information-technology": {
+   "f": "F-1, F-2, F-3",
+   "t": "A facility that cannot wait should not be in the first ring of an update by default. Recovery is measured to the service, not the machine, and the privilege software runs with is a parameter the design can lower.",
+   "c": "The facility class shown here has carried all three since before Edition 1, and Edition 1 holds them."
+  },
+  "financial-services": {
+   "f": "F-1, F-2",
+   "t": "Assured finality of payment must reach the edge of the system, where people actually pay, and the permissions that continuity depends on must be granted before the war, not during it.",
+   "c": "The facility class shown here has carried both since before Edition 1, and Edition 1 holds them."
+  },
+  "food-and-agriculture": {
+   "f": "F-1, F-2",
+   "t": "A company's share of the food supply is counted across every plant that shares its systems, and restoration is credited only from what the attack cannot reach.",
+   "c": "The facility class shown here has carried both since before Edition 1, and Edition 1 holds them."
+  },
+  "critical-manufacturing": {
+   "f": "F-1, F-2",
+   "t": "Repair capacity is part of the replacement path, and an emergency order is not ready until its path includes the buyer and the funds.",
+   "c": "The facility class shown here has carried both since before Edition 1, and Edition 1 holds them."
+  },
+  "defense-industrial-base": {
+   "f": "F-1, F-2",
+   "t": "The protective response rests on the security assessment, not only on whether a crime is proven: other defense plants take their posture from it, under a named authority, without waiting for the criminal finding. A defense group's other sites carry its reputation, and each one states its exposure.",
+   "c": "The facility class shown here has carried both since before Edition 1, and Edition 1 holds them."
+  },
+  "government-facilities": {
+   "f": "F-1, F-2",
+   "t": "Structural robustness is measured by the people it protects. Those who cannot escape unaided are placed, not only counted: where they are held, against the parts of the building most exposed to collapse, is stated.",
+   "c": "The facility class shown here has carried both since before Edition 1, and Edition 1 holds them."
+  },
+  "commercial-facilities": {
+   "f": "F-1, F-2",
+   "t": "A refuge states where its overflow goes, and the means of evacuation are committed before the refuge opens.",
+   "c": "The facility class shown here has carried both since before Edition 1, and Edition 1 holds them."
+  },
+  "energy": {
+   "f": "F-4",
+   "t": "A field's share of its region sets the cascade, whatever removes it. Aliso Canyon held about two-thirds of its company's storage, and it was an injection ban and a drawdown, not damage to the field, that removed it as the region's buffer.",
+   "c": "The series takes this up in a later revision."
+  }
+ }
+}

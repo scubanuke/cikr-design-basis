@@ -60,6 +60,7 @@ GLOSSARY = json.load(open(C('content', 'glossary.json'), encoding='utf-8'))
 FC = json.load(open(C('content', 'facility_classes.json'), encoding='utf-8'))['sectors']
 READERS = json.load(open(C('content', 'readers.json'), encoding='utf-8'))
 PAGES = json.load(open(C('content', 'pages.json'), encoding='utf-8'))
+DESIGN = json.load(open(C('content', 'design_lines.json'), encoding='utf-8'))
 DATA = [(slug, name, parse_card(C('content', 'cards', f))) for f, slug, name in SECTORS]
 
 # ---- layout --------------------------------------------------------------
@@ -156,6 +157,11 @@ def sector_page(slug, name, d):
             lis = ''.join('<li>%s <span class="st">— %s</span></li>' % (e(o['title']), 'written, available on request' if o['status'] == 'written' else 'planned') for o in items)
             parts.append(('<h3>%s</h3>' % e(g) if g else '') + '<ul>%s</ul>' % lis)
         olist = '<section class="others"><h2>Other facility classes in this sector</h2>%s<p class="note">These may change as the facility class work rolls out.</p></section>' % ''.join(parts)
+    design = ''
+    dl = DESIGN['lines'].get(slug)
+    if dl and not dl.get('hold'):
+        retitle = [c['title'] for c in d['cards'] if KIND[c['kind']] == 're'][0]
+        design = '<section class="design"><h2>What it means for the design</h2><p class="note">%s</p><p class="prose">%s %s</p><p class="note">From the findings of <em>%s</em> (%s).</p></section>' % (e(DESIGN['intro']), inline(dl['t']), inline(dl['c']), e(retitle), e(dl['f']))
     chapter = ''
     if MASTER_DRAFT_LIVE and slug in MASTER_DRAFT_CHAPTERS:
         chapter = '<p class="notice">The master draft reads this example in <a href="%smaster-draft.html">%s</a>.</p>' % (r, e(MASTER_DRAFT_CHAPTERS[slug]))
@@ -169,6 +175,7 @@ def sector_page(slug, name, d):
 <div class="cards">
 {''.join(cards)}
 </div>
+{design}
 {chapter}
 {olist}'''
     page('sectors/%s.html' % slug, '%s — CIKR Design Basis Examples' % name, body, d['sowhat'])

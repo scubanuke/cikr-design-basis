@@ -103,7 +103,7 @@
     "status": "written"
    },
    {
-    "title": "Large-scale seawater reverse-osmosis desalination",
+    "title": "Seawater reverse-osmosis desalination",
     "status": "written"
    },
    {
@@ -131,15 +131,15 @@
     "status": "written"
    },
    {
-    "title": "Core, switching, routing and signaling",
+    "title": "Core switching, routing and signaling",
     "status": "written"
    },
    {
-    "title": "Positioning, navigation and timing reception and distribution",
+    "title": "Positioning, navigation and timing",
     "status": "written"
    },
    {
-    "title": "Operations and sector coordination",
+    "title": "Operations and coordination",
     "status": "written"
    }
   ],
@@ -163,7 +163,7 @@
     "status": "planned"
    },
    {
-    "title": "Core banking",
+    "title": "Core banking and ledger",
     "status": "planned"
    },
    {
