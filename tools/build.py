@@ -66,9 +66,11 @@ DATA = [(slug, name, parse_card(C('content', 'cards', f))) for f, slug, name in 
 NAV = [('index.html','Sectors'),('design-basis.html','What is a design basis?'),('readers/public.html','For the public'),
        ('readers/regulators.html','Regulators'),('readers/defenders.html','Defenders'),('readers/supply-chain.html','Supply chain'),
        ('glossary.html','Glossary'),('request.html','Ask for more')]
+EXTERNAL_NAV = [('https://scubanuke.github.io/publications/','Publications')]
 def page(path, title, body, desc='', terms=True):
     depth = path.count('/'); r = '../' * depth
     nav = ''.join('<a href="%s%s"%s>%s</a>' % (r, h, ' class="on" aria-current="page"' if h == path else '', e(t)) for h, t in NAV)
+    nav += ''.join('<a href="%s">%s</a>' % (h, e(t)) for h, t in EXTERNAL_NAV)
     gl = {k: {'t': v['term'], 'd': v['def'], 'm': v['match']} for k, v in GLOSSARY.items()}
     banner = '<div class="draftbar">%s</div>' % e(BANNER_TEXT) if DRAFT_BANNER else ''
     out = f'''<!DOCTYPE html>
@@ -95,6 +97,7 @@ def page(path, title, body, desc='', terms=True):
 <footer class="site"><div class="in">
 <p>Every document linked from this site is frozen in <em>{e(EDITION)}</em>, <a href="https://doi.org/{VERSION_DOI}">doi:{VERSION_DOI}</a>, as it stood on {EDITION_DATE}. Each is a working draft, marked DRAFT on its cover. The working documents continue to change, and later editions will record them.</p>
 <p>Timothy E. Roxey, Eclectic Technologies. Text and documents licensed CC BY 4.0. Questions and requests: a private message through <a href="{SUBSTACK}">timroxey.substack.com</a>.</p>
+<p>The full library of Eclectic Technologies documents, with their DOIs: <a href="https://scubanuke.github.io/publications/">Publications</a>.</p>
 </div></footer>
 <script>window.CIKR_GLOSSARY={json.dumps(gl, ensure_ascii=False)};</script>
 <script src="{r}assets/glossary.js"></script>
