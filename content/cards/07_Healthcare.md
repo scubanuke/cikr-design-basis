@@ -18,5 +18,7 @@ A use case runs a postulated attack forward through a facility class to see wher
 *Source: DBA-HPH-UC-1_Surge_During_Grid_and_Communications_Outage_v0_1*
 
 ## Reference event — Loss of Power at Memorial Medical Center (DBA-HPH-RE-2)
+**Date:** Aug–Sep 2005
+**Tier:** No adversary established
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. During Hurricane Katrina in August 2005, Memorial Medical Center in New Orleans lost its power. The hospital stood below sea level, a 2004 warning about flooding had not been acted on, and its plan assumed backup power would last three days; it lasted less than two. Evacuation, including from a long-unused helipad, continued until the evening of 1 September. Experts in later litigation disagree on why the power failed. None of the four marks of military action was present. Read against the event, the hospital class held, with gaps, and nothing in the event fell outside it.
 *Source: DBA-HPH-RE-2_Loss_of_Power_at_Memorial_Medical_Center_v0_1*

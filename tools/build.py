@@ -50,7 +50,12 @@ def parse_card(path):
     d['dependedby'] = re.search(r'\*\*Depended on by:\*\* (.+)', s).group(1).strip()
     for m in re.finditer(r'^## (Sector framework|Facility class|Use case|Reference event) — (.+?) \(([^)]+)\)\n(.+?)\n\*Source: ([^*]+)\*', s, re.M | re.S):
         body = m.group(4).strip()
-        d['cards'].append({'kind': m.group(1), 'title': m.group(2).strip(), 'des': m.group(3).strip(),
+        meta = {}
+        if m.group(1) == 'Reference event':   # date and tier feed the cross-sector index
+            for key in ('Date', 'Tier'):
+                mm = re.match(r'\*\*%s:\*\* (.+)\n' % key, body); assert mm, (path, key)
+                meta[key.lower()] = mm.group(1).strip(); body = body[mm.end():]
+        d['cards'].append({**meta, 'kind': m.group(1), 'title': m.group(2).strip(), 'des': m.group(3).strip(),
                            'body': body.replace(ON_REQUEST, '').strip(), 'onreq': ON_REQUEST in body,
                            'src': m.group(5).strip()})
     assert len(d['cards']) == 4, path
@@ -64,7 +69,34 @@ DESIGN = json.load(open(C('content', 'design_lines.json'), encoding='utf-8'))
 DATA = [(slug, name, parse_card(C('content', 'cards', f))) for f, slug, name in SECTORS]
 
 # ---- layout --------------------------------------------------------------
-NAV = [('index.html','Sectors'),('design-basis.html','What is a design basis?'),('readers/public.html','For the public'),
+# Eclectic Technologies cross-site switcher: the same block carried by all eight sites.
+ET_SWITCHER = '''<!-- Eclectic Technologies site switcher -->
+<style>
+.etnav{background:#0A1628;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.4;border-bottom:1px solid #24344a;}
+.etnav__in{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 20px;}
+.etnav__brand{font-weight:700;letter-spacing:.02em;color:#f0f4f8;text-decoration:none;white-space:nowrap;}
+.etnav__brand span{color:#C8893A;}
+.etnav__links{display:flex;gap:4px;flex-wrap:wrap;}
+.etnav__links a{color:#c3d0df;text-decoration:none;padding:5px 12px;border-radius:6px;font-weight:600;}
+.etnav__links a:hover{background:#1a2b42;color:#fff;}
+.etnav__links a[aria-current="page"]{background:#C8893A;color:#0A1628;}
+</style>
+<nav class="etnav" aria-label="Eclectic Technologies sites">
+  <div class="etnav__in">
+    <a class="etnav__brand" href="https://scubanuke.github.io/publications/">Eclectic <span>Technologies</span></a>
+    <div class="etnav__links">
+      <a href="https://scubanuke.github.io/ai-governance-course/">Course</a>
+      <a href="https://scubanuke.github.io/foundational-definitions/">Foundational Definitions</a>
+      <a href="https://scubanuke.github.io/cikr-design-basis/" aria-current="page">CIKR Examples</a>
+      <a href="https://scubanuke.github.io/dba-en-navigation/">Energy Series</a>
+      <a href="https://scubanuke.github.io/command-broker/">Command Broker</a>
+      <a href="https://scubanuke.github.io/smr-licensing/">SMR Licensing</a>
+      <a href="https://scubanuke.github.io/publications/">Publications</a>
+    </div>
+  </div>
+</nav>'''
+
+NAV = [('index.html','Sectors'),('reference-events.html','Reference events'),('design-basis.html','What is a design basis?'),('readers/public.html','For the public'),
        ('readers/regulators.html','Regulators'),('readers/defenders.html','Defenders'),('readers/supply-chain.html','Supply chain'),
        ('glossary.html','Glossary'),('request.html','Ask for more')]
 EXTERNAL_NAV = [('https://scubanuke.github.io/publications/','Publications')]
@@ -87,6 +119,7 @@ def page(path, title, body, desc='', terms=True):
 </head>
 <body{'' if terms else ' class="no-terms"'}>
 <a class="skip" href="#main">Skip to content</a>
+{ET_SWITCHER}
 {banner}
 <header class="top"><div class="in">
 <a class="brand" href="{r}index.html"><span class="eyebrow">Eclectic Technologies</span><span class="name">CIKR Design Basis Examples</span></a>
@@ -138,7 +171,7 @@ def sector_page(slug, name, d):
             foot = '<p class="onreq"><a href="%srequest.html">%s</a></p><p class="note">Summary card only. Use cases are not published.</p>' % (r, ON_REQUEST)
         else:
             foot = '<a href="%s%s.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, %s · <a href="https://doi.org/%s">doi:%s</a></span>' % (PDF_BASE, e(c['src']), EDITION_DATE, VERSION_DOI, VERSION_DOI)
-        cards.append(f'''<article class="card {k}">
+        cards.append(f'''<article class="card {k}" id="{e(c['des'].lower())}">
 <span class="kind">{e(label)}</span>
 <h3>{e(c['title'])}</h3><p class="des">{e(c['des'])}</p>
 <p>{inline(c['body'])}</p>
@@ -226,6 +259,28 @@ def readers():
 <p class="prose">Fuller use cases and more detailed versions are released to defenders, regulators and researchers on request. See <a href="../request.html">Ask for more</a>.</p>'''
         page('readers/%s.html' % k, '%s — CIKR Design Basis Examples' % v['title'], body, v['blurb'])
 
+TIER_ORDER = ['Military-action tier met', 'Military action, tier not established', 'Adversarial, not military action', 'No adversary established']
+MONTHS = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
+def date_key(t):
+    y = re.search(r'(1[89]|20)\d\d', t).group(0)
+    m = re.search(r'\b(%s)' % '|'.join(MONTHS), t.lower())
+    dd = re.match(r'(\d{1,2})\b', t)
+    return (y, MONTHS.index(m.group(1)) if m else -1, int(dd.group(1)) if dd else 0)
+def reference_events():
+    rows = []
+    for slug, name, d in DATA:
+        for c in d['cards']:
+            if KIND[c['kind']] != 're': continue
+            assert c['tier'] in TIER_ORDER, (c['des'], c['tier'])
+            rows.append((date_key(c['date']), name, c, slug))
+    rows.sort(key=lambda x: (x[0], x[1]))
+    trs = ''.join('<tr><td><a href="sectors/%s.html#%s">%s</a><br><span class="note">%s</span></td><td><a href="sectors/%s.html">%s</a></td><td>%s</td><td>%s</td></tr>'
+                  % (s, e(c['des'].lower()), e(c['title']), e(c['des']), s, e(n), e(c['date']), e(c['tier'])) for y, n, c, s in rows)
+    body = f'''<p class="eyebrow">Observed events, all sectors</p><h1>Reference events</h1>
+<p class="prose">A reference event reads a real event back through the design basis to ask whether the method was sufficient. Each one lives on its sector's page; this index lists them together, oldest first, so they can be read across sectors. It is generated from the same cards as the sector pages and is an index, not a second register: the tier shown is the reading frozen in <em>{e(EDITION)}</em>, and each event's own entry, and the document behind it, is where the reading is made.</p>
+<div class="tablewrap"><table class="reidx"><thead><tr><th>Event</th><th>Sector</th><th>Date</th><th>Tier</th></tr></thead><tbody>{trs}</tbody></table></div>'''
+    page('reference-events.html', 'Reference events — CIKR Design Basis Examples', body, 'Every reference event on the site, across all sectors, with its date and tier.')
+
 def glossary():
     items = ''.join('<dt id="%s">%s</dt><dd>%s</dd>' % (k, e(v['term']), inline(v['def'])) for k, v in sorted(GLOSSARY.items(), key=lambda x: x[1]['term'].lower()))
     body = f'''<p class="eyebrow">Terms in plain language</p><h1>Glossary</h1>
@@ -248,7 +303,7 @@ def master_draft():
 
 if __name__ == '__main__':
     for slug, name, d in DATA: sector_page(slug, name, d)
-    home(); design_basis(); readers(); glossary(); request()
+    home(); design_basis(); readers(); reference_events(); glossary(); request()
     if MASTER_DRAFT_LIVE: master_draft()
     elif os.path.exists(C('master-draft.html')): os.remove(C('master-draft.html'))
     print('built', len(DATA), 'sector pages')

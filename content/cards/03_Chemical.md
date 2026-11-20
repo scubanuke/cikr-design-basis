@@ -18,5 +18,7 @@ A use case runs a postulated attack forward through a facility class to see wher
 *Source: DBA-CHEM-UC-3_Sole_Disinfectant_Supplier_Taken_Down_v0_2*
 
 ## Reference event — Arkema Crosby Fire (DBA-CHEM-RE-2)
+**Date:** 31 Aug 2017
+**Tier:** No adversary established
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. In August 2017, flooding from Hurricane Harvey cut power to the Arkema plant at Crosby, Texas, and defeated its emergency generators and cooling. Nearby residents were evacuated, and the stored chemicals burned over several days. The U.S. Chemical Safety Board found a common mode of failure in every layer of protection: one flood took them all. The event was not military action: intentionality, persistence and precision were absent, and denial came from the flood, not from an actor.
 *Source: DBA-CHEM-RE-2_Arkema_Crosby_Fire_v0_2*

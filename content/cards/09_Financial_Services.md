@@ -18,5 +18,7 @@ A use case runs a postulated scenario forward through a facility class to see wh
 *Source: DBA-FIN-UC-1_Settlement_Through_a_Campaign_on_the_Grid_and_Communications_v0_1*
 
 ## Reference event — Ukraine's Payment System Through the War (DBA-FIN-RE-3)
+**Date:** Feb 2022 – Jul 2023
+**Tier:** Military-action tier met
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. Ukraine's central bank reports that since the full-scale invasion of February 2022 its main interbank payment system has kept working, from reserve sites, through strikes on the electricity system that began in October 2022. Banks were allowed to use computing hosted abroad, and a network of branches with their own power, more than 2,370 by July 2023, served the public. All four marks of military action are established on the record. The design held at the center. Public access held only because that branch network was built, and the permission to use computing abroad came only after the war began.
 *Source: DBA-FIN-RE-3_Ukraines_Payment_System_Through_the_War_v0_2*

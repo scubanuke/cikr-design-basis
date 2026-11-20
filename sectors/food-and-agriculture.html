@@ -11,10 +11,35 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<!-- Eclectic Technologies site switcher -->
+<style>
+.etnav{background:#0A1628;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.4;border-bottom:1px solid #24344a;}
+.etnav__in{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 20px;}
+.etnav__brand{font-weight:700;letter-spacing:.02em;color:#f0f4f8;text-decoration:none;white-space:nowrap;}
+.etnav__brand span{color:#C8893A;}
+.etnav__links{display:flex;gap:4px;flex-wrap:wrap;}
+.etnav__links a{color:#c3d0df;text-decoration:none;padding:5px 12px;border-radius:6px;font-weight:600;}
+.etnav__links a:hover{background:#1a2b42;color:#fff;}
+.etnav__links a[aria-current="page"]{background:#C8893A;color:#0A1628;}
+</style>
+<nav class="etnav" aria-label="Eclectic Technologies sites">
+  <div class="etnav__in">
+    <a class="etnav__brand" href="https://scubanuke.github.io/publications/">Eclectic <span>Technologies</span></a>
+    <div class="etnav__links">
+      <a href="https://scubanuke.github.io/ai-governance-course/">Course</a>
+      <a href="https://scubanuke.github.io/foundational-definitions/">Foundational Definitions</a>
+      <a href="https://scubanuke.github.io/cikr-design-basis/" aria-current="page">CIKR Examples</a>
+      <a href="https://scubanuke.github.io/dba-en-navigation/">Energy Series</a>
+      <a href="https://scubanuke.github.io/command-broker/">Command Broker</a>
+      <a href="https://scubanuke.github.io/smr-licensing/">SMR Licensing</a>
+      <a href="https://scubanuke.github.io/publications/">Publications</a>
+    </div>
+  </div>
+</nav>
 <div class="draftbar">Early preview — November 2026</div>
 <header class="top"><div class="in">
 <a class="brand" href="../index.html"><span class="eyebrow">Eclectic Technologies</span><span class="name">CIKR Design Basis Examples</span></a>
-<nav aria-label="Site"><a href="../index.html">Sectors</a><a href="../design-basis.html">What is a design basis?</a><a href="../readers/public.html">For the public</a><a href="../readers/regulators.html">Regulators</a><a href="../readers/defenders.html">Defenders</a><a href="../readers/supply-chain.html">Supply chain</a><a href="../glossary.html">Glossary</a><a href="../request.html">Ask for more</a><a href="https://scubanuke.github.io/publications/">Publications</a></nav>
+<nav aria-label="Site"><a href="../index.html">Sectors</a><a href="../reference-events.html">Reference events</a><a href="../design-basis.html">What is a design basis?</a><a href="../readers/public.html">For the public</a><a href="../readers/regulators.html">Regulators</a><a href="../readers/defenders.html">Defenders</a><a href="../readers/supply-chain.html">Supply chain</a><a href="../glossary.html">Glossary</a><a href="../request.html">Ask for more</a><a href="https://scubanuke.github.io/publications/">Publications</a></nav>
 </div></header>
 <main id="main">
 <p class="eyebrow">Sector</p>
@@ -25,22 +50,22 @@
 
 <p class="prose note">The framework and facility class set the design basis. The last two cards keep evidence and hypothesis apart: <strong>Observed</strong> is a real event and what it showed; <strong>Postulated</strong> is a scenario the design must withstand.</p>
 <div class="cards">
-<article class="card sf">
+<article class="card sf" id="dba-fa_sector_framework">
 <span class="kind">Sector framework</span>
 <h3>Food and Agriculture Sector Framework</h3><p class="des">DBA-FA_Sector_Framework</p>
 <p>A sector framework states what a sector&#x27;s systems must be built to withstand, from ordinary accidents up to a deliberate, sustained attack. This one covers growing, processing, storing and distributing food. It holds that food carries two consequences, shortage and harm to health, and asks that they be kept separate. Farms are too many for any one to be critical, so the framework concentrates on chokepoints, above all the few large plants that handle a national share of a product. It also notes that the sector leans on five others at once, and treats the loss of several together as the governing case.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-FA_Sector_Framework_v0_5.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
-</article><article class="card fc">
+</article><article class="card fc" id="dba-fa-fp-fc2">
 <span class="kind">Facility class</span>
 <h3>Food Processing and Manufacturing</h3><p class="des">DBA-FA-FP-FC2</p>
 <p>A facility class takes the sector framework down to one kind of facility. This one is the plant where raw farm product becomes food, such as meat, dairy, grain, beverages and packaged goods. It follows two chains of harm: a plant that stops and cuts the supply, and a plant that releases unsafe food, with illness appearing days or weeks later. The two join when a plant finds a hazard, stops and holds its product. The class sets out how a plant should accept, release, hold, recall and restart, and states that no single plant can fully protect people from losing a major source of food.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-FA-FP-FC2_Food_Processing_and_Manufacturing_v0_2.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
-</article><article class="card re">
+</article><article class="card re" id="dba-fa-re-1">
 <span class="kind">Observed · Reference event</span>
 <h3>Ransomware Attack on JBS</h3><p class="des">DBA-FA-RE-1</p>
 <p>A reference event reads a real event back through the design basis to ask whether the method was sufficient. At the end of May 2021 a ransomware attack on shared business computer systems led meat processor JBS to suspend them, and its U.S. beef plants stopped within a day. As reported, national cattle slaughter fell 22 percent and hogs 20 percent from a week earlier. On 2 June the company said the vast majority of its facilities had resumed. The Federal Bureau of Investigation attributed the attack to a criminal group. Denial was absent, and the event does not meet the threshold for military action. It showed that shared systems, not single plants, set the supply loss.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-FA-RE-1_Ransomware_Attack_on_JBS_v0_1.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
-</article><article class="card uc">
+</article><article class="card uc" id="dba-fa-uc-1">
 <span class="kind">Postulated · Use case</span>
 <h3>Deliberate Contamination at the Processing Chokepoint With Detection Denied</h3><p class="des">DBA-FA-UC-1</p>
 <p>A use case runs a postulated scenario forward through a facility class to see where the design holds and where it does not. Here an adversary deliberately contaminates food at a processing chokepoint. The consequence is illness across a large population before the cause is known, and the loss of the plant&#x27;s share of supply. The case shows that the class&#x27;s rules for stopping and holding product can limit the harm once the plant has a first credible sign of it, and it raises open questions about warning the public.</p>

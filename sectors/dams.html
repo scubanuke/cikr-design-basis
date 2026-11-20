@@ -11,10 +11,35 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<!-- Eclectic Technologies site switcher -->
+<style>
+.etnav{background:#0A1628;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.4;border-bottom:1px solid #24344a;}
+.etnav__in{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 20px;}
+.etnav__brand{font-weight:700;letter-spacing:.02em;color:#f0f4f8;text-decoration:none;white-space:nowrap;}
+.etnav__brand span{color:#C8893A;}
+.etnav__links{display:flex;gap:4px;flex-wrap:wrap;}
+.etnav__links a{color:#c3d0df;text-decoration:none;padding:5px 12px;border-radius:6px;font-weight:600;}
+.etnav__links a:hover{background:#1a2b42;color:#fff;}
+.etnav__links a[aria-current="page"]{background:#C8893A;color:#0A1628;}
+</style>
+<nav class="etnav" aria-label="Eclectic Technologies sites">
+  <div class="etnav__in">
+    <a class="etnav__brand" href="https://scubanuke.github.io/publications/">Eclectic <span>Technologies</span></a>
+    <div class="etnav__links">
+      <a href="https://scubanuke.github.io/ai-governance-course/">Course</a>
+      <a href="https://scubanuke.github.io/foundational-definitions/">Foundational Definitions</a>
+      <a href="https://scubanuke.github.io/cikr-design-basis/" aria-current="page">CIKR Examples</a>
+      <a href="https://scubanuke.github.io/dba-en-navigation/">Energy Series</a>
+      <a href="https://scubanuke.github.io/command-broker/">Command Broker</a>
+      <a href="https://scubanuke.github.io/smr-licensing/">SMR Licensing</a>
+      <a href="https://scubanuke.github.io/publications/">Publications</a>
+    </div>
+  </div>
+</nav>
 <div class="draftbar">Early preview — November 2026</div>
 <header class="top"><div class="in">
 <a class="brand" href="../index.html"><span class="eyebrow">Eclectic Technologies</span><span class="name">CIKR Design Basis Examples</span></a>
-<nav aria-label="Site"><a href="../index.html">Sectors</a><a href="../design-basis.html">What is a design basis?</a><a href="../readers/public.html">For the public</a><a href="../readers/regulators.html">Regulators</a><a href="../readers/defenders.html">Defenders</a><a href="../readers/supply-chain.html">Supply chain</a><a href="../glossary.html">Glossary</a><a href="../request.html">Ask for more</a><a href="https://scubanuke.github.io/publications/">Publications</a></nav>
+<nav aria-label="Site"><a href="../index.html">Sectors</a><a href="../reference-events.html">Reference events</a><a href="../design-basis.html">What is a design basis?</a><a href="../readers/public.html">For the public</a><a href="../readers/regulators.html">Regulators</a><a href="../readers/defenders.html">Defenders</a><a href="../readers/supply-chain.html">Supply chain</a><a href="../glossary.html">Glossary</a><a href="../request.html">Ask for more</a><a href="https://scubanuke.github.io/publications/">Publications</a></nav>
 </div></header>
 <main id="main">
 <p class="eyebrow">Sector</p>
@@ -25,22 +50,22 @@
 
 <p class="prose note">The framework and facility class set the design basis. The last two cards keep evidence and hypothesis apart: <strong>Observed</strong> is a real event and what it showed; <strong>Postulated</strong> is a scenario the design must withstand.</p>
 <div class="cards">
-<article class="card sf">
+<article class="card sf" id="dba-dams_sector_framework">
 <span class="kind">Sector framework</span>
 <h3>Dams Sector Framework</h3><p class="des">DBA-DAMS_Sector_Framework</p>
 <p>A sector framework states what a sector&#x27;s systems must be built to withstand, from ordinary failures up to deliberate military action. This one covers dams, reservoirs, and the levees and other works that hold water back from people. It treats the sudden release of stored water as the consequence that matters most, and it measures that consequence by the area a flood would cover and the people in it, not by how long service is lost. It notes that today&#x27;s dam-safety programs were built for accidents and weather, not for someone choosing the moment of failure, and it begins to close that gap.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-DAMS_Sector_Framework_v0_4.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
-</article><article class="card fc">
+</article><article class="card fc" id="dba-dams-ds-fc1">
 <span class="kind">Facility class</span>
 <h3>Dam Structures and Water-Control Works</h3><p class="des">DBA-DAMS-DS-FC1</p>
 <p>A facility class takes the sector framework down to one kind of facility. This one is the dam itself: the wall that holds the water and the works built to release it. It sets out that stored water can leave by two routes: a breach of the structure, or those release works. A gate that opens at the wrong moment, or fails to open when it must, can do much of what a breach does. A failure can also drain a reservoir others rely on. The class asks whether a dam can hold itself safe when power, networks and outside help are lost, and it states plainly that no dam can be built to survive every deliberate act.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-DAMS-DS-FC1_Dam_Structures_and_Water-Control_Works_v0_4.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
-</article><article class="card re">
+</article><article class="card re" id="dba-dams-re-1">
 <span class="kind">Observed · Reference event</span>
 <h3>Destruction of the Kakhovka Dam</h3><p class="des">DBA-DAMS-RE-1</p>
 <p>A reference event reads a real event back through the design basis to ask whether the method was sufficient. On 6 June 2023 Ukraine&#x27;s Kakhovka dam on the Dnipro was destroyed. A joint assessment by the Government of Ukraine and the United Nations counted about 620 square kilometers flooded and about 100,000 residents directly affected. Each government has blamed the other, and the instrument makes no finding on who acted. It finds intentionality, persistence and denial present, but precision, the fourth mark, cannot be determined from the record. It reads the event as military action, but because all four marks are not established, the event does not carry the military-action tier.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-DAMS-RE-1_Destruction_of_the_Kakhovka_Dam_v0_3.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
-</article><article class="card uc">
+</article><article class="card uc" id="dba-dams-uc-3">
 <span class="kind">Postulated · Use case</span>
 <h3>The Facilities in a Dam&#x27;s Flood Path</h3><p class="des">DBA-DAMS-UC-3</p>
 <p>A use case runs a postulated attack forward through a facility class to see where the design holds and where it does not. Here a dam above a valley is deliberately breached without warning, and the flood reaches a chemical plant, a drinking-water plant and a fire station downstream. The case shows that the dam&#x27;s class correctly counts the facilities in a flood&#x27;s path. But none of the three had counted the dam above it as a source of flood, and the warning that should have moved people and equipment was lost. The chemical plant&#x27;s release then reached the water plant&#x27;s intake.</p>

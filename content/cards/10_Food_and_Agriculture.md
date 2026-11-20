@@ -18,5 +18,7 @@ A use case runs a postulated scenario forward through a facility class to see wh
 *Source: DBA-FA-UC-1_Contamination_at_the_Chokepoint_With_Detection_Denied_v0_1*
 
 ## Reference event — Ransomware Attack on JBS (DBA-FA-RE-1)
+**Date:** May–Jun 2021
+**Tier:** Adversarial, not military action
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. At the end of May 2021 a ransomware attack on shared business computer systems led meat processor JBS to suspend them, and its U.S. beef plants stopped within a day. As reported, national cattle slaughter fell 22 percent and hogs 20 percent from a week earlier. On 2 June the company said the vast majority of its facilities had resumed. The Federal Bureau of Investigation attributed the attack to a criminal group. Denial was absent, and the event does not meet the threshold for military action. It showed that shared systems, not single plants, set the supply loss.
 *Source: DBA-FA-RE-1_Ransomware_Attack_on_JBS_v0_1*

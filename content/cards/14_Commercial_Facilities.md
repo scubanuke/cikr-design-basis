@@ -18,5 +18,7 @@ A use case runs a postulated attack forward through a facility class to see wher
 *Source: DBA-CF-UC-1_The_Refuge_Struck_v0_1*
 
 ## Reference event — Superdome as Refuge of Last Resort in Hurricane Katrina (DBA-CF-RE-3)
+**Date:** Aug–Sep 2005
+**Tier:** No adversary established
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. In August 2005 the Louisiana Superdome served as New Orleans's refuge of last resort during Hurricane Katrina. The House committee found it lay in a floodplain and was not wind-resistant. The storm tore its roof covering and cut power and plumbing, and, on the Senate committee's figure, more than twenty thousand people stayed nearly a week. By Tuesday it was full, and about nineteen thousand gathered at the Convention Center, supplied only on Friday. There was no adversary, so the event is not a military action.
 *Source: DBA-CF-RE-3_Superdome_as_Refuge_of_Last_Resort_in_Hurricane_Katrina_v0_1*

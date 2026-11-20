@@ -18,5 +18,7 @@ A use case runs a postulated attack forward through a facility class to see wher
 *Source: DBA-COMM-UC-2_Grid_Denied_Access_Sites_Struck_v0_1*
 
 ## Reference event — CenturyLink Outage (DBA-COMM-RE-13)
+**Date:** 27 Dec 2018
+**Tier:** No adversary established
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. In December 2018 a fault in one piece of equipment set off a flood of repeated internal messages across CenturyLink's long-distance network. Service, including 911 for some seventeen million customers in twenty-nine states, was disrupted for almost thirty-seven hours. The event was not military action: nobody chose it, no actor was present, and nothing was aimed. Denial was present only in effect. Two regulators differ on where responsibility for the 911 losses in Washington State lies, and the instrument makes no finding between them.
 *Source: DBA-COMM-RE-13_CenturyLink_Outage_v0_2*

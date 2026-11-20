@@ -11,10 +11,35 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<!-- Eclectic Technologies site switcher -->
+<style>
+.etnav{background:#0A1628;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.4;border-bottom:1px solid #24344a;}
+.etnav__in{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 20px;}
+.etnav__brand{font-weight:700;letter-spacing:.02em;color:#f0f4f8;text-decoration:none;white-space:nowrap;}
+.etnav__brand span{color:#C8893A;}
+.etnav__links{display:flex;gap:4px;flex-wrap:wrap;}
+.etnav__links a{color:#c3d0df;text-decoration:none;padding:5px 12px;border-radius:6px;font-weight:600;}
+.etnav__links a:hover{background:#1a2b42;color:#fff;}
+.etnav__links a[aria-current="page"]{background:#C8893A;color:#0A1628;}
+</style>
+<nav class="etnav" aria-label="Eclectic Technologies sites">
+  <div class="etnav__in">
+    <a class="etnav__brand" href="https://scubanuke.github.io/publications/">Eclectic <span>Technologies</span></a>
+    <div class="etnav__links">
+      <a href="https://scubanuke.github.io/ai-governance-course/">Course</a>
+      <a href="https://scubanuke.github.io/foundational-definitions/">Foundational Definitions</a>
+      <a href="https://scubanuke.github.io/cikr-design-basis/" aria-current="page">CIKR Examples</a>
+      <a href="https://scubanuke.github.io/dba-en-navigation/">Energy Series</a>
+      <a href="https://scubanuke.github.io/command-broker/">Command Broker</a>
+      <a href="https://scubanuke.github.io/smr-licensing/">SMR Licensing</a>
+      <a href="https://scubanuke.github.io/publications/">Publications</a>
+    </div>
+  </div>
+</nav>
 <div class="draftbar">Early preview — November 2026</div>
 <header class="top"><div class="in">
 <a class="brand" href="../index.html"><span class="eyebrow">Eclectic Technologies</span><span class="name">CIKR Design Basis Examples</span></a>
-<nav aria-label="Site"><a href="../index.html">Sectors</a><a href="../design-basis.html">What is a design basis?</a><a href="../readers/public.html">For the public</a><a href="../readers/regulators.html">Regulators</a><a href="../readers/defenders.html">Defenders</a><a href="../readers/supply-chain.html">Supply chain</a><a href="../glossary.html">Glossary</a><a href="../request.html">Ask for more</a><a href="https://scubanuke.github.io/publications/">Publications</a></nav>
+<nav aria-label="Site"><a href="../index.html">Sectors</a><a href="../reference-events.html">Reference events</a><a href="../design-basis.html">What is a design basis?</a><a href="../readers/public.html">For the public</a><a href="../readers/regulators.html">Regulators</a><a href="../readers/defenders.html">Defenders</a><a href="../readers/supply-chain.html">Supply chain</a><a href="../glossary.html">Glossary</a><a href="../request.html">Ask for more</a><a href="https://scubanuke.github.io/publications/">Publications</a></nav>
 </div></header>
 <main id="main">
 <p class="eyebrow">Sector</p>
@@ -25,22 +50,22 @@
 
 <p class="prose note">The framework and facility class set the design basis. The last two cards keep evidence and hypothesis apart: <strong>Observed</strong> is a real event and what it showed; <strong>Postulated</strong> is a scenario the design must withstand.</p>
 <div class="cards">
-<article class="card sf">
+<article class="card sf" id="dba-w-sector_framework">
 <span class="kind">Sector framework</span>
 <h3>Water Sector Framework</h3><p class="des">DBA-W-Sector_Framework</p>
 <p>A sector framework states what a sector&#x27;s systems must be built to withstand, from floods and long power outages up to a deliberate, sustained attack. This one covers drinking water and wastewater, and it names three functions that must hold: safe drinking water, contained wastewater, and protection of public health. It does not let a utility count on the power grid or chemical deliveries staying available when their loss is itself one of the events planned for. It also asks that what operators see on their screens be trustworthy, not merely present, because every manual safeguard depends on an operator acting on an accurate picture.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-W-Sector_Framework_v1_16.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
-</article><article class="card fc">
+</article><article class="card fc" id="dba-w-fc1">
 <span class="kind">Facility class</span>
 <h3>Water Treatment Plant</h3><p class="des">DBA-W-FC1</p>
 <p>A facility class takes the sector framework down to one kind of facility. This one is the treatment plant, where river or well water is made safe to drink, together with the chemical storage that disinfection depends on. A treatment plant carries two dangers at once: losing disinfection, which reaches every tap downstream, and a release of stored treatment chemicals, which reaches the neighborhood around the plant. The class sets out how a plant should settle into a safe condition on its own, with only a small crew, when it loses its networked controls and outside support, and it states plainly what remains beyond its design.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-W-FC1_Water_Treatment_Plant_v0_6.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
-</article><article class="card re">
+</article><article class="card re" id="dba-w-re-1">
 <span class="kind">Observed · Reference event</span>
 <h3>Minnesota Water Campaign</h3><p class="des">DBA-W-RE-1</p>
 <p>A reference event reads a real event back through the design basis to ask whether the method was sufficient. In late July 2026 a coordinated cyber attack disrupted controls at more than thirty Minnesota water and wastewater systems, the first-reported part of a campaign later counted at about a hundred facilities in at least twelve states. In the Minnesota cases officials said drinking-water quality was not affected, and at Braham crews restored the plant in about two hours. The event showed three of the four marks of military action; the fourth, denial, was absent, because crews could reach their plants. No official attribution has been made, and the record remains open.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-W-RE-1_Minnesota_Water_Campaign_v0_8.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
-</article><article class="card uc">
+</article><article class="card uc" id="dba-w-uc-1">
 <span class="kind">Postulated · Use case</span>
 <h3>Area-Denial Attack on a Large Surface-Water Treatment Plant</h3><p class="des">DBA-W-UC-1</p>
 <p>A use case runs a postulated attack forward through a facility class to see where the design holds and where it does not. Here a capable adversary strikes a large treatment plant&#x27;s chemical storage, forcing the crew to leave, and interferes with the plant&#x27;s controls at the same time. The case shows that a plant able to reach a safe state by itself defeats the control-system half of the attack and keeps the drinking-water consequence inside the fence. The chemical release is different. It crosses the fence line, and there the plant&#x27;s design hands off to community emergency planning.</p>

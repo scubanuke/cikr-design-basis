@@ -18,5 +18,7 @@ A use case runs a postulated attack forward through a facility class to see wher
 *Source: DBA-TRAN-UC-1_Strategic_Seaport_Denial_v0_2*
 
 ## Reference event — Key Bridge Collapse (DBA-TRAN-RE-8)
+**Date:** 26 Mar 2024
+**Tier:** No adversary established
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. On 26 March 2024 the containership Dali lost power near Baltimore and struck a pier of the Francis Scott Key Bridge. The bridge collapsed, six members of a highway maintenance crew died, and the shipping channel beneath reopened in stages, fully restored only after seventy-six days. The National Transportation Safety Board found an electrical failure aboard the ship as the probable cause. None of the four marks of military action was present. The event showed what one span can do when it carries two routes at once, a highway and a channel.
 *Source: DBA-TRAN-RE-8_Key_Bridge_Collapse_v0_2*

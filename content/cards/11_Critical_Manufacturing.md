@@ -18,5 +18,7 @@ A use case runs a postulated scenario forward through a facility class to see wh
 *Source: DBA-CM-UC-1_The_Asset_and_Its_Replacement_Struck_Together_v0_1*
 
 ## Reference event — Denial of Large-Transformer Replacement in Ukraine (DBA-CM-RE-1)
+**Date:** 2022–2023
+**Tier:** Military-action tier met
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. From October 2022 repeated strikes hit Ukraine's power system. A United Nations assessment found that 42 of 94 vital high-voltage transformers were damaged or destroyed between January and April 2023, and that more than half were struck again, which blocked repair. The country's largest transformer plant was reported closed by the war in March 2022. All four marks of military action were present. The strikes are attributed to Russian armed forces by the International Criminal Court's warrants and by Ukraine and its partners. The record remains open.
 *Source: DBA-CM-RE-1_Denial_of_Large_Transformer_Replacement_in_Ukraine_v0_1*

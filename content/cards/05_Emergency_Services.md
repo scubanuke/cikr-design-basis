@@ -18,5 +18,7 @@ A use case runs a postulated scenario forward through the design to see where it
 *Source: DBA-ESS-UC-1_Compound_Failure_Operate-Through_v0_2*
 
 ## Reference event — Derecho 911 Outages (DBA-ESS-RE-1)
+**Date:** 29 Jun 2012
+**Tier:** No adversary established
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. On the night of 29 June 2012 a derecho, a long-lived windstorm, cut power across the Mid-Atlantic. On the federal regulator's account, seventy-seven 911 centers in six states serving more than 3.6 million people lost some connectivity, and seventeen centers in three states lost service completely. Fairfax County's center had its own power and staff, yet for seven hours no 911 call reached it, because the failures lay in the telephone network upstream. None of the four marks of military action was present.
 *Source: DBA-ESS-RE-1_Derecho_911_Outages_v0_2*

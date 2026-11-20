@@ -18,5 +18,7 @@ A use case runs a postulated attack forward through a facility class to see wher
 *Source: DBA-DAMS-UC-3_Facilities_in_a_Dams_Flood_Path_v0_1*
 
 ## Reference event — Destruction of the Kakhovka Dam (DBA-DAMS-RE-1)
+**Date:** 6 Jun 2023
+**Tier:** Military action, tier not established
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. On 6 June 2023 Ukraine's Kakhovka dam on the Dnipro was destroyed. A joint assessment by the Government of Ukraine and the United Nations counted about 620 square kilometers flooded and about 100,000 residents directly affected. Each government has blamed the other, and the instrument makes no finding on who acted. It finds intentionality, persistence and denial present, but precision, the fourth mark, cannot be determined from the record. It reads the event as military action, but because all four marks are not established, the event does not carry the military-action tier.
 *Source: DBA-DAMS-RE-1_Destruction_of_the_Kakhovka_Dam_v0_3*

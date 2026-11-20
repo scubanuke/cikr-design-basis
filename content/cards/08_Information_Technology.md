@@ -18,5 +18,7 @@ A use case runs a postulated scenario forward through a facility class to see wh
 *Source: DBA-IT-UC-1_Pre-Positioned_Capability_Activated_During_a_Grid_Attack_v0_1*
 
 ## Reference event — Faulty Content Update of 19 July 2024 (DBA-IT-RE-2)
+**Date:** 19 Jul 2024
+**Tier:** No adversary established
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. On 19 July 2024 a faulty content update to a widely used security product stopped about 8.5 million computers. The vendor reversed it after 78 minutes, but many machines had to be repaired by hand. Some emergency call centers fell back to taking calls by hand, and at a House hearing members described disruption at hospitals, banks and airlines. It was an accident, not an attack, and the reading makes no finding of fault. Read against the event, the class held, with gaps, among them that recovery should be measured to the service, not the machine.
 *Source: DBA-IT-RE-2_Faulty_Content_Update_of_19_July_2024_v0_1*

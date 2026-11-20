@@ -18,5 +18,7 @@ A use case runs a postulated attack forward through a facility class to see wher
 *Source: DBA-GF-UC-1_The_Seat_Struck_During_the_Conflict_v0_1*
 
 ## Reference event — Bombing of the Murrah Federal Building (DBA-GF-RE-1)
+**Date:** 19 Apr 1995
+**Tier:** Adversarial, not military action
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. On 19 April 1995 a bomb exploded outside the Alfred P. Murrah Federal Building in Oklahoma City, which housed federal offices and a day-care center. Roughly half of the usable space collapsed, and 168 people died, nineteen of them children. Most of the dead were in the part that fell. The attack was a domestic act of terrorism, a single act without persistence or denial, so it does not meet the test for military action. Federal buildings were afterward sorted into security levels.
 *Source: DBA-GF-RE-1_Bombing_of_the_Murrah_Federal_Building_v0_1*

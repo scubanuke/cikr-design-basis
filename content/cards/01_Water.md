@@ -18,5 +18,7 @@ A use case runs a postulated attack forward through a facility class to see wher
 *Source: DBA-W-UC-1_Area_Denial_Surface_Water_Plant_v0_3*
 
 ## Reference event — Minnesota Water Campaign (DBA-W-RE-1)
+**Date:** 26–27 Jul 2026
+**Tier:** Adversarial, not military action
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. In late July 2026 a coordinated cyber attack disrupted controls at more than thirty Minnesota water and wastewater systems, the first-reported part of a campaign later counted at about a hundred facilities in at least twelve states. In the Minnesota cases officials said drinking-water quality was not affected, and at Braham crews restored the plant in about two hours. The event showed three of the four marks of military action; the fourth, denial, was absent, because crews could reach their plants. No official attribution has been made, and the record remains open.
 *Source: DBA-W-RE-1_Minnesota_Water_Campaign_v0_8*

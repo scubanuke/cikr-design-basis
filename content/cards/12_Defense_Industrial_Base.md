@@ -18,5 +18,7 @@ A use case runs a postulated attack forward through a facility class to see wher
 *Source: DBA-DIB-UC-1_Production_Struck_at_Depth_v0_1*
 
 ## Reference event — Fire at the Diehl Plant in Berlin (DBA-DIB-RE-1)
+**Date:** 3 May 2024
+**Tier:** No adversary established
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. On 3 May 2024 a fire partly collapsed a production building at a Berlin site of the Diehl group, a German defense company. The site coats and stamps metal parts and, the company says, does not supply its defense unit. In December 2024 the public prosecutor closed the case, finding no sign of arson and pointing to an electrical cause. Unnamed officials had suspected Russian saboteurs; that suspicion is unproven, and no government has attributed the fire. No adversary is established, so the event does not meet the test for military action.
 *Source: DBA-DIB-RE-1_Fire_at_the_Diehl_Plant_in_Berlin_v0_2*

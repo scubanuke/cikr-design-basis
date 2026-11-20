@@ -11,10 +11,35 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<!-- Eclectic Technologies site switcher -->
+<style>
+.etnav{background:#0A1628;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.4;border-bottom:1px solid #24344a;}
+.etnav__in{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 20px;}
+.etnav__brand{font-weight:700;letter-spacing:.02em;color:#f0f4f8;text-decoration:none;white-space:nowrap;}
+.etnav__brand span{color:#C8893A;}
+.etnav__links{display:flex;gap:4px;flex-wrap:wrap;}
+.etnav__links a{color:#c3d0df;text-decoration:none;padding:5px 12px;border-radius:6px;font-weight:600;}
+.etnav__links a:hover{background:#1a2b42;color:#fff;}
+.etnav__links a[aria-current="page"]{background:#C8893A;color:#0A1628;}
+</style>
+<nav class="etnav" aria-label="Eclectic Technologies sites">
+  <div class="etnav__in">
+    <a class="etnav__brand" href="https://scubanuke.github.io/publications/">Eclectic <span>Technologies</span></a>
+    <div class="etnav__links">
+      <a href="https://scubanuke.github.io/ai-governance-course/">Course</a>
+      <a href="https://scubanuke.github.io/foundational-definitions/">Foundational Definitions</a>
+      <a href="https://scubanuke.github.io/cikr-design-basis/" aria-current="page">CIKR Examples</a>
+      <a href="https://scubanuke.github.io/dba-en-navigation/">Energy Series</a>
+      <a href="https://scubanuke.github.io/command-broker/">Command Broker</a>
+      <a href="https://scubanuke.github.io/smr-licensing/">SMR Licensing</a>
+      <a href="https://scubanuke.github.io/publications/">Publications</a>
+    </div>
+  </div>
+</nav>
 <div class="draftbar">Early preview — November 2026</div>
 <header class="top"><div class="in">
 <a class="brand" href="../index.html"><span class="eyebrow">Eclectic Technologies</span><span class="name">CIKR Design Basis Examples</span></a>
-<nav aria-label="Site"><a href="../index.html">Sectors</a><a href="../design-basis.html">What is a design basis?</a><a href="../readers/public.html">For the public</a><a href="../readers/regulators.html">Regulators</a><a href="../readers/defenders.html">Defenders</a><a href="../readers/supply-chain.html">Supply chain</a><a href="../glossary.html">Glossary</a><a href="../request.html">Ask for more</a><a href="https://scubanuke.github.io/publications/">Publications</a></nav>
+<nav aria-label="Site"><a href="../index.html">Sectors</a><a href="../reference-events.html">Reference events</a><a href="../design-basis.html">What is a design basis?</a><a href="../readers/public.html">For the public</a><a href="../readers/regulators.html">Regulators</a><a href="../readers/defenders.html">Defenders</a><a href="../readers/supply-chain.html">Supply chain</a><a href="../glossary.html">Glossary</a><a href="../request.html">Ask for more</a><a href="https://scubanuke.github.io/publications/">Publications</a></nav>
 </div></header>
 <main id="main">
 <p class="eyebrow">Sector</p>
@@ -25,22 +50,22 @@
 
 <p class="prose note">The framework and facility class set the design basis. The last two cards keep evidence and hypothesis apart: <strong>Observed</strong> is a real event and what it showed; <strong>Postulated</strong> is a scenario the design must withstand.</p>
 <div class="cards">
-<article class="card sf">
+<article class="card sf" id="dba-dib_sector_framework">
 <span class="kind">Sector framework</span>
 <h3>Defense Industrial Base Sector Framework</h3><p class="des">DBA-DIB_Sector_Framework</p>
 <p>A sector framework states what a sector&#x27;s systems must be built to withstand, from ordinary accidents up to deliberate military action. This one covers the industry that builds, supplies and tests the weapons and equipment of the armed forces. It has two features that together set it apart. The threat is not only that a plant stops, but that an adversary copies a design or corrupts a part, and rebuilding cannot undo that harm. And the sector sits downstream of manufacturing, so it inherits that sector&#x27;s exposure to parts that only a few sources can make. It is a working draft, with some sections still to be written.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-DIB_Sector_Framework_v0_5.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
-</article><article class="card fc">
+</article><article class="card fc" id="dba-dib-dp-fc1">
 <span class="kind">Facility class</span>
 <h3>Defense Production and Sustainment</h3><p class="des">DBA-DIB-DP-FC1</p>
 <p>A facility class takes the sector framework down to one kind of facility. This one covers the plants, shipyards, arsenals and depots that build and maintain military equipment, including ammunition plants. It traces three ways harm reaches the armed forces: production is lost or slowed, the technical data a plant holds is copied, or the plant&#x27;s output is altered so that it is not what it is said to be. The second and third harms are not undone by rebuilding. The class treats a plant&#x27;s drawings and process records as an asset in their own right, and it states plainly what remains beyond its design.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-DIB-DP-FC1_Defense_Production_and_Sustainment_v0_3.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
-</article><article class="card re">
+</article><article class="card re" id="dba-dib-re-1">
 <span class="kind">Observed · Reference event</span>
 <h3>Fire at the Diehl Plant in Berlin</h3><p class="des">DBA-DIB-RE-1</p>
 <p>A reference event reads a real event back through the design basis to ask whether the method was sufficient. On 3 May 2024 a fire partly collapsed a production building at a Berlin site of the Diehl group, a German defense company. The site coats and stamps metal parts and, the company says, does not supply its defense unit. In December 2024 the public prosecutor closed the case, finding no sign of arson and pointing to an electrical cause. Unnamed officials had suspected Russian saboteurs; that suspicion is unproven, and no government has attributed the fire. No adversary is established, so the event does not meet the test for military action.</p>
 <div class="foot"><a href="https://scubanuke.github.io/publications/cikr/edition-1/DBA-DIB-RE-1_Fire_at_the_Diehl_Plant_in_Berlin_v0_2.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, 1 November 2026 · <a href="https://doi.org/10.5281/zenodo.23863986">doi:10.5281/zenodo.23863986</a></span></div>
-</article><article class="card uc">
+</article><article class="card uc" id="dba-dib-uc-1">
 <span class="kind">Postulated · Use case</span>
 <h3>Production Struck at Depth</h3><p class="des">DBA-DIB-UC-1</p>
 <p>A use case runs a postulated attack forward through a facility class to see where the design holds and where it does not. Here a nation at war loses the one building a key munitions plant cannot run without, fires of unclear cause break out at other plants far from the fighting, and the plants&#x27; technical data turns out to have been taken earlier. The case shows that the separation and protection such plants already carry against their own hazards confines the loss to the building struck. It also raises open questions: site plans among the stolen data that no one counted, no trigger to revisit a building&#x27;s protection, and no named authority to relax acceptance checks in wartime.</p>
