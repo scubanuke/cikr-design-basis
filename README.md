@@ -6,7 +6,7 @@ Every document the site links to is frozen in *CIKR Design Basis Examples, Editi
 
 ## How the site is built
 
-The HTML at the repository root is generated. Edit the sources in `content/` and run `python3 tools/build.py` from the repository root.
+The HTML at the repository root is generated. Edit the sources in `content/` and run `python3 tools/build.py` from the repository root. The build reads the shared glossary terms from `glossary.json` in the `foundational-definitions` repository, so that repository must be checked out beside this one; a glossary entry here that carries `fd` takes its definition from there. The build also writes `reference-events.html`, the cross-sector index of reference events, from the **Date** and **Tier** lines of each reference event card.
 
 `content/cards/` holds the public text of the sector cards, copied from Project 0's card drafts with the checker notes removed. `content/facility_classes.json` holds each sector's other facility classes, titles only, generated from the DBA Facility Class Register; it is not part of the frozen edition. `content/readers.json`, `content/pages.json` and `content/glossary.json` hold the reader pages, the fixed pages and the glossary. `assets/figures/` holds the two figures; `tools/make_layers_figure.py` draws the simplified design basis layers figure.
 

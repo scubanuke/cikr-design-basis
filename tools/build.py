@@ -62,6 +62,15 @@ def parse_card(path):
     return d
 
 GLOSSARY = json.load(open(C('content', 'glossary.json'), encoding='utf-8'))
+# Terms shared across the sites are defined once, in the Foundational Definitions glossary
+# (scubanuke/foundational-definitions, glossary.json). An entry here that carries "fd" takes its
+# definition from there at build time, so the foundational-definitions repo must be checked out
+# beside this one. Nothing is restated here.
+FD_GLOSSARY_URL = 'https://scubanuke.github.io/foundational-definitions/#/glossary'
+FD_GLOSSARY = {t['id']: t for t in json.load(open(os.path.join(ROOT, '..', 'foundational-definitions', 'glossary.json'), encoding='utf-8'))['terms']}
+for _k, _v in GLOSSARY.items():
+    if 'fd' in _v:
+        _v['def'] = FD_GLOSSARY[_v['fd']]['def']
 FC = json.load(open(C('content', 'facility_classes.json'), encoding='utf-8'))['sectors']
 READERS = json.load(open(C('content', 'readers.json'), encoding='utf-8'))
 PAGES = json.load(open(C('content', 'pages.json'), encoding='utf-8'))
@@ -282,9 +291,9 @@ def reference_events():
     page('reference-events.html', 'Reference events — CIKR Design Basis Examples', body, 'Every reference event on the site, across all sectors, with its date and tier.')
 
 def glossary():
-    items = ''.join('<dt id="%s">%s</dt><dd>%s</dd>' % (k, e(v['term']), inline(v['def'])) for k, v in sorted(GLOSSARY.items(), key=lambda x: x[1]['term'].lower()))
+    items = ''.join('<dt id="%s">%s</dt><dd>%s%s</dd>' % (k, e(v['term']), inline(v['def']), ' <span class="note">From the <a href="%s">Foundational Definitions glossary</a>.</span>' % FD_GLOSSARY_URL if 'fd' in v else '') for k, v in sorted(GLOSSARY.items(), key=lambda x: x[1]['term'].lower()))
     body = f'''<p class="eyebrow">Terms in plain language</p><h1>Glossary</h1>
-<p class="prose">These are the terms the site uses, in plain language. A dotted underline anywhere on the site marks a term defined here; tap it to see the definition. The authoritative definitions are in the <a href="https://doi.org/{FD_EDITION_DOI}">Foundational Definitions</a>, and where the two differ, those govern.</p>
+<p class="prose">These are the terms the site uses, in plain language. A dotted underline anywhere on the site marks a term defined here; tap it to see the definition. Terms shared with the other Eclectic Technologies sites come from the <a href="{FD_GLOSSARY_URL}">Foundational Definitions glossary</a>, where they are defined once. The authoritative definitions are in the <a href="https://doi.org/{FD_EDITION_DOI}">Foundational Definitions</a>, and where the two differ, those govern.</p>
 <dl class="gloss">{items}</dl>'''
     page('glossary.html', 'Glossary — CIKR Design Basis Examples', body, 'Plain-language definitions of the terms used on this site.', terms=False)
 
