@@ -7,7 +7,7 @@
 
 ## Sector framework — Government Facilities Sector Framework (DBA-GF_Sector_Framework)
 A sector framework states what a sector's systems must be built to withstand, from ordinary accidents up to deliberate military action. This one covers the buildings and systems through which governments operate, courts sit and elections are run. It holds that a government building's value is the function it houses, so the harm it measures is the loss of the ability to govern, with continuity of government as the most serious case. It also names a harm no other sector has: attacks on symbolic sites aim at national morale and confidence, and no recovery time can measure that. It is a working draft, with some sections still to be written.
-*Source: DBA-GF_Sector_Framework_v0_5*
+*Source: DBA-GF_Sector_Framework_v0_10*
 
 ## Facility class — Government Operations and Continuity (DBA-GF-GO-FC1)
 A facility class takes the sector framework down to one kind of facility. This one covers the buildings where a government does its business or keeps itself in being when its ordinary seat is lost, such as office buildings, capitols and continuity sites at every level of government. It follows three harms: the loss of the ability to govern, harm to the people inside, and the symbolic damage of a seat struck or entered. It treats openness to the public as part of the service, so these buildings cannot simply close their doors. It states plainly that some losses, including lives lost before any protection acts, cannot be fully answered.
@@ -21,4 +21,4 @@ A use case runs a postulated attack forward through a facility class to see wher
 **Date:** 19 Apr 1995
 **Tier:** Adversarial, not military action
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. On 19 April 1995 a bomb exploded outside the Alfred P. Murrah Federal Building in Oklahoma City, which housed federal offices and a day-care center. Roughly half of the usable space collapsed, and 168 people died, nineteen of them children. Most of the dead were in the part that fell. The attack was a domestic act of terrorism, a single act without persistence or denial, so it does not meet the test for military action. Federal buildings were afterward sorted into security levels.
-*Source: DBA-GF-RE-1_Bombing_of_the_Murrah_Federal_Building_v0_1*
+*Source: DBA-GF-RE-1_Bombing_of_the_Murrah_Federal_Building_v0_3*

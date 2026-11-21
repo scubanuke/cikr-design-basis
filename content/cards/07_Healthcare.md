@@ -7,7 +7,7 @@
 
 ## Sector framework — Healthcare and Public Health Sector Framework (DBA-HPH_Sector_Framework)
 A sector framework states what a sector's systems must be built to withstand, from ordinary failures up to deliberate military action. This one covers the delivery of care, the supply of medical materials, and public health and laboratory work. It points out that a hospital produces no physical goods: its care depends on electric power, clean and dialysis-grade water, communications and medical gas that come from other sectors, and for the most time-critical patients their loss is measured in hours. It notes that existing rules measure readiness by plans and drills, and that no document yet states what care must be shown able to withstand.
-*Source: DBA-HPH_Sector_Framework_v0_6*
+*Source: DBA-HPH_Sector_Framework_v0_8*
 
 ## Facility class — Care Delivery (DBA-HPH-CD-FC1)
 A facility class takes the sector framework down to one kind of facility. This one is mainly the hospital, with dialysis and long-term care also in its scope. It holds people who cannot leave and runs on power, water, gas and communications from outside. The class names two dangers: losing care for patients already inside, and a surge larger than the hospital can carry through to definitive care, measured by critically injured patients per hour, not by beds. It asks whether a hospital can hold life-sustaining care on its own, and it declares that a direct strike can destroy any part of a hospital, and that a campaign outlasting its endurance ends its continuity.
@@ -21,4 +21,4 @@ A use case runs a postulated attack forward through a facility class to see wher
 **Date:** Aug–Sep 2005
 **Tier:** No adversary established
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. During Hurricane Katrina in August 2005, Memorial Medical Center in New Orleans lost its power. The hospital stood below sea level, a 2004 warning about flooding had not been acted on, and its plan assumed backup power would last three days; it lasted less than two. Evacuation, including from a long-unused helipad, continued until the evening of 1 September. Experts in later litigation disagree on why the power failed. None of the four marks of military action was present. Read against the event, the hospital class held, with gaps, and nothing in the event fell outside it.
-*Source: DBA-HPH-RE-2_Loss_of_Power_at_Memorial_Medical_Center_v0_1*
+*Source: DBA-HPH-RE-2_Loss_of_Power_at_Memorial_Medical_Center_v0_2*

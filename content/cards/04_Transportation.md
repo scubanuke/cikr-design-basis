@@ -7,7 +7,7 @@
 
 ## Sector framework — Transportation Sector Framework (DBA-TRAN_Sector_Framework)
 A sector framework states what a sector's systems must be built to withstand, from ordinary accidents up to a deliberate, sustained attack. This one covers aviation, rail and transit, shipping and inland waterways, and highways. Instead of organizing by mode, it organizes by function: the places where movement gathers, the routes it travels, the vehicles that carry it, and the control that grants permission to move. It does not let a facility count on electric power, communications or satellite positioning and timing staying available when their loss is itself one of the events planned for. It also states plainly that no design makes the sector proof against a state that sets out to stop it.
-*Source: DBA-TRAN_Sector_Framework_v0_11*
+*Source: DBA-TRAN_Sector_Framework_v0_13*
 
 ## Facility class — Nodes and Terminals (DBA-TRAN-ND-FC1)
 A facility class takes the sector framework down to one kind of facility. This one covers nodes: airports, seaports, rail yards, transit stations and truck terminals, where movement gathers and changes hands. A small number of nodes carry a large share of the nation's movement, so losing one is not a local event. The class weighs two harms: goods that cannot move, and people inside the node who must reach safety. It finds that a node's fallback is a rate, not a switch. When systems fail, the node falls back to working by hand, more slowly, for as long as its people and paper last.
@@ -21,4 +21,4 @@ A use case runs a postulated attack forward through a facility class to see wher
 **Date:** 26 Mar 2024
 **Tier:** No adversary established
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. On 26 March 2024 the containership Dali lost power near Baltimore and struck a pier of the Francis Scott Key Bridge. The bridge collapsed, six members of a highway maintenance crew died, and the shipping channel beneath reopened in stages, fully restored only after seventy-six days. The National Transportation Safety Board found an electrical failure aboard the ship as the probable cause. None of the four marks of military action was present. The event showed what one span can do when it carries two routes at once, a highway and a channel.
-*Source: DBA-TRAN-RE-8_Key_Bridge_Collapse_v0_2*
+*Source: DBA-TRAN-RE-8_Key_Bridge_Collapse_v0_4*

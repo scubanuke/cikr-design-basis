@@ -7,7 +7,7 @@
 
 ## Sector framework — Food and Agriculture Sector Framework (DBA-FA_Sector_Framework)
 A sector framework states what a sector's systems must be built to withstand, from ordinary accidents up to a deliberate, sustained attack. This one covers growing, processing, storing and distributing food. It holds that food carries two consequences, shortage and harm to health, and asks that they be kept separate. Farms are too many for any one to be critical, so the framework concentrates on chokepoints, above all the few large plants that handle a national share of a product. It also notes that the sector leans on five others at once, and treats the loss of several together as the governing case.
-*Source: DBA-FA_Sector_Framework_v0_5*
+*Source: DBA-FA_Sector_Framework_v0_9*
 
 ## Facility class — Food Processing and Manufacturing (DBA-FA-FP-FC2)
 A facility class takes the sector framework down to one kind of facility. This one is the plant where raw farm product becomes food, such as meat, dairy, grain, beverages and packaged goods. It follows two chains of harm: a plant that stops and cuts the supply, and a plant that releases unsafe food, with illness appearing days or weeks later. The two join when a plant finds a hazard, stops and holds its product. The class sets out how a plant should accept, release, hold, recall and restart, and states that no single plant can fully protect people from losing a major source of food.
@@ -21,4 +21,4 @@ A use case runs a postulated scenario forward through a facility class to see wh
 **Date:** May–Jun 2021
 **Tier:** Adversarial, not military action
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. At the end of May 2021 a ransomware attack on shared business computer systems led meat processor JBS to suspend them, and its U.S. beef plants stopped within a day. As reported, national cattle slaughter fell 22 percent and hogs 20 percent from a week earlier. On 2 June the company said the vast majority of its facilities had resumed. The Federal Bureau of Investigation attributed the attack to a criminal group. Denial was absent, and the event does not meet the threshold for military action. It showed that shared systems, not single plants, set the supply loss.
-*Source: DBA-FA-RE-1_Ransomware_Attack_on_JBS_v0_1*
+*Source: DBA-FA-RE-1_Ransomware_Attack_on_JBS_v0_2*

@@ -5,7 +5,7 @@
   "water": {
    "f": "F-1, F-2, F-8",
    "t": "The design basis must treat what operators see on their screens as something that can be falsified, test whether defenses that look separate rest on one shared foundation, and count configuration shared across many utilities as a single exposure for the whole sector.",
-   "c": "The Water Sector Framework has carried all three since its v1.6, and Edition 1 holds them."
+   "c": "The Water Sector Framework has carried all three since its v1.6, and Edition 2 holds them."
   },
   "communications": {
    "f": "F-1, F-3, F-4",
@@ -25,7 +25,7 @@
   "emergency-services": {
    "f": "F-1, F-2, F-3",
    "t": "Detection of a silent failure must survive the loss of the power it watches. Backup power is credited only once it has been shown to run, and diversity of routes is verified against the physical route.",
-   "c": "The facility class shown here has carried all three since before Edition 1, and Edition 1 holds them."
+   "c": "The facility class shown here has carried all three since before Edition 1, and Edition 2 holds them."
   },
   "dams": {
    "f": "F-1, F-3, F-4",
@@ -40,37 +40,37 @@
   "information-technology": {
    "f": "F-1, F-2, F-3",
    "t": "A facility that cannot wait should not be in the first ring of an update by default. Recovery is measured to the service, not the machine, and the privilege software runs with is a parameter the design can lower.",
-   "c": "The facility class shown here has carried all three since before Edition 1, and Edition 1 holds them."
+   "c": "The facility class shown here has carried all three since before Edition 1, and Edition 2 holds them."
   },
   "financial-services": {
    "f": "F-1, F-2",
    "t": "Assured finality of payment must reach the edge of the system, where people actually pay, and the permissions that continuity depends on must be granted before the war, not during it.",
-   "c": "The facility class shown here has carried both since before Edition 1, and Edition 1 holds them."
+   "c": "The facility class shown here has carried both since before Edition 1, and Edition 2 holds them."
   },
   "food-and-agriculture": {
    "f": "F-1, F-2",
    "t": "A company's share of the food supply is counted across every plant that shares its systems, and restoration is credited only from what the attack cannot reach.",
-   "c": "The facility class shown here has carried both since before Edition 1, and Edition 1 holds them."
+   "c": "The facility class shown here has carried both since before Edition 1, and Edition 2 holds them."
   },
   "critical-manufacturing": {
    "f": "F-1, F-2",
    "t": "Repair capacity is part of the replacement path, and an emergency order is not ready until its path includes the buyer and the funds.",
-   "c": "The facility class shown here has carried both since before Edition 1, and Edition 1 holds them."
+   "c": "The facility class shown here has carried both since before Edition 1, and Edition 2 holds them."
   },
   "defense-industrial-base": {
    "f": "F-1, F-2",
    "t": "The protective response rests on the security assessment, not only on whether a crime is proven: other defense plants take their posture from it, under a named authority, without waiting for the criminal finding. A defense group's other sites carry its reputation, and each one states its exposure.",
-   "c": "The facility class shown here has carried both since before Edition 1, and Edition 1 holds them."
+   "c": "The facility class shown here has carried both since before Edition 1, and Edition 2 holds them."
   },
   "government-facilities": {
    "f": "F-1, F-2",
    "t": "Structural robustness is measured by the people it protects. Those who cannot escape unaided are placed, not only counted: where they are held, against the parts of the building most exposed to collapse, is stated.",
-   "c": "The facility class shown here has carried both since before Edition 1, and Edition 1 holds them."
+   "c": "The facility class shown here has carried both since before Edition 1, and Edition 2 holds them."
   },
   "commercial-facilities": {
    "f": "F-1, F-2",
    "t": "A refuge states where its overflow goes, and the means of evacuation are committed before the refuge opens.",
-   "c": "The facility class shown here has carried both since before Edition 1, and Edition 1 holds them."
+   "c": "The facility class shown here has carried both since before Edition 1, and Edition 2 holds them."
   },
   "energy": {
    "f": "F-4",

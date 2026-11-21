@@ -7,7 +7,7 @@
 
 ## Sector framework — Communications Sector Framework (DBA-COMM_Sector_Framework)
 A sector framework states what a sector's systems must be built to withstand, from ordinary failures up to a deliberate, sustained attack. This one covers the networks that carry calls, data, emergency alerts and timing signals, and it sorts them by the job they do rather than by administrative labels. It treats the failure of a communications facility as the moment when every other sector's plan for lost communications begins. It also records that no existing communications instrument sets out a design basis, and that the dependence on electric power runs in both directions.
-*Source: DBA-COMM_Sector_Framework_v0_15*
+*Source: DBA-COMM_Sector_Framework_v0_16*
 
 ## Facility class — Access and Edge (DBA-COMM-AC-FC2)
 A facility class takes the sector framework down to one kind of facility. This one covers the access and edge of the network: the cell sites, central offices, local lines and broadcast transmitters where service is handed to people and to the facilities that depend on it. It is the part of the network that runs out of power first when the grid fails. The class sets out two measures, how long a site keeps going on its own power and how much service survives, and asks that every 911 center and hospital keep at least one working path. It also states what protection cannot do against a determined attacker.
@@ -21,4 +21,4 @@ A use case runs a postulated attack forward through a facility class to see wher
 **Date:** 27 Dec 2018
 **Tier:** No adversary established
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. In December 2018 a fault in one piece of equipment set off a flood of repeated internal messages across CenturyLink's long-distance network. Service, including 911 for some seventeen million customers in twenty-nine states, was disrupted for almost thirty-seven hours. The event was not military action: nobody chose it, no actor was present, and nothing was aimed. Denial was present only in effect. Two regulators differ on where responsibility for the 911 losses in Washington State lies, and the instrument makes no finding between them.
-*Source: DBA-COMM-RE-13_CenturyLink_Outage_v0_2*
+*Source: DBA-COMM-RE-13_CenturyLink_Outage_v0_5*

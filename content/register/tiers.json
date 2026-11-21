@@ -1,0 +1,413 @@
+{
+ "DBA-W-RE-1": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-W-RE-2": {
+  "tier": "No adversary established",
+  "confirmed": "Author's approval of the label, 21 Nov 2026."
+ },
+ "DBA-W-RE-3": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-COMM-RE-1": {
+  "tier": "No adversary established",
+  "confirmed": "Author's approval of the label, 21 Nov 2026."
+ },
+ "DBA-COMM-RE-2": {
+  "tier": "Military action, tier not established"
+ },
+ "DBA-COMM-RE-3": {
+  "tier": "No adversary established"
+ },
+ "DBA-COMM-RE-4": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-COMM-RE-5": {
+  "tier": "No adversary established"
+ },
+ "DBA-COMM-RE-6": {
+  "tier": "Military-action tier met",
+  "confirmed": "Author's approval of the label, 21 Nov 2026."
+ },
+ "DBA-COMM-RE-7": {
+  "tier": "No adversary established"
+ },
+ "DBA-COMM-RE-8": {
+  "tier": "No adversary established"
+ },
+ "DBA-COMM-RE-9": {
+  "tier": "Military-action tier met",
+  "confirmed": "Author's approval of the label, 21 Nov 2026."
+ },
+ "DBA-COMM-RE-10": {
+  "tier": "No adversary established"
+ },
+ "DBA-COMM-RE-11": {
+  "tier": "No adversary established"
+ },
+ "DBA-COMM-RE-12": {
+  "tier": "Military action, tier not established"
+ },
+ "DBA-COMM-RE-13": {
+  "tier": "No adversary established"
+ },
+ "DBA-COMM-RE-14": {
+  "tier": "Military action, tier not established",
+  "confirmed": "Author's ruling, 21 Nov 2026 (Project 11 session; Edition_3_Owed_Conformances v0.2): military action as preparation of the battle space, without the tier. The frozen v0.4 text still reads 'not military action' and conforms in the Edition 3 run."
+ },
+ "DBA-CHEM-RE-1": {
+  "tier": "Military action, tier not established",
+  "confirmed": "Author's ruling, 21 Nov 2026 (Project 11 session; Edition_3_Owed_Conformances v0.2): military action as preparation of the battle space, without the tier. The frozen v0.4 text still reads 'not military action' and conforms in the Edition 3 run."
+ },
+ "DBA-CHEM-RE-2": {
+  "tier": "No adversary established"
+ },
+ "DBA-CHEM-RE-3": {
+  "tier": "No adversary established"
+ },
+ "DBA-CHEM-RE-4": {
+  "tier": "No adversary established"
+ },
+ "DBA-CHEM-RE-5": {
+  "tier": "No adversary established"
+ },
+ "DBA-CHEM-RE-7": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-ESS-RE-1": {
+  "tier": "No adversary established"
+ },
+ "DBA-ESS-RE-2": {
+  "tier": "No adversary established"
+ },
+ "DBA-ESS-RE-3": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-ESS-RE-4": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-ESS-RE-5": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-ESS-RE-6": {
+  "tier": "No adversary established"
+ },
+ "DBA-ESS-RE-8": {
+  "tier": "No adversary established"
+ },
+ "DBA-ESS-RE-9": {
+  "tier": "Military-action tier met",
+  "confirmed": "Author's approval of the label, 21 Nov 2026."
+ },
+ "DBA-ESS-RE-11": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-ESS-RE-12": {
+  "tier": "Military-action tier met"
+ },
+ "DBA-TRAN-RE-1": {
+  "tier": "Military action, tier not established",
+  "confirmed": "Author's approval of the label, 21 Nov 2026."
+ },
+ "DBA-TRAN-RE-2": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-TRAN-RE-3": {
+  "tier": "No adversary established"
+ },
+ "DBA-TRAN-RE-4": {
+  "tier": "No adversary established"
+ },
+ "DBA-TRAN-RE-5": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-TRAN-RE-6": {
+  "tier": "No adversary established"
+ },
+ "DBA-TRAN-RE-8": {
+  "tier": "No adversary established"
+ },
+ "DBA-TRAN-RE-9": {
+  "tier": "No adversary established"
+ },
+ "DBA-TRAN-RE-10": {
+  "tier": "Military-action tier met",
+  "confirmed": "Author's approval of the label, 21 Nov 2026."
+ },
+ "DBA-TRAN-RE-12": {
+  "tier": "No adversary established"
+ },
+ "DBA-TRAN-RE-13": {
+  "tier": "No adversary established"
+ },
+ "DBA-TRAN-RE-15": {
+  "tier": "No adversary established"
+ },
+ "DBA-TRAN-RE-16": {
+  "tier": "No adversary established"
+ },
+ "DBA-TRAN-RE-17": {
+  "tier": "No adversary established"
+ },
+ "DBA-TRAN-RE-18": {
+  "tier": "No adversary established"
+ },
+ "DBA-TRAN-RE-19": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-TRAN-RE-20": {
+  "tier": "No adversary established"
+ },
+ "DBA-DAMS-RE-1": {
+  "tier": "Military-action tier met"
+ },
+ "DBA-DAMS-RE-2": {
+  "tier": "No adversary established"
+ },
+ "DBA-DAMS-RE-3": {
+  "tier": "No adversary established"
+ },
+ "DBA-DAMS-RE-4": {
+  "tier": "Military action, tier not established",
+  "confirmed": "Author's ruling, 21 Nov 2026 (Project 11 session; Edition_3_Owed_Conformances v0.2): military action as preparation of the battle space, without the tier. The frozen v0.4 text still reads 'not military action' and conforms in the Edition 3 run."
+ },
+ "DBA-DAMS-RE-5": {
+  "tier": "No adversary established"
+ },
+ "DBA-DAMS-RE-6": {
+  "tier": "No adversary established"
+ },
+ "DBA-DAMS-RE-7": {
+  "tier": "No adversary established"
+ },
+ "DBA-DAMS-RE-9": {
+  "tier": "No adversary established"
+ },
+ "DBA-HPH-RE-1": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-HPH-RE-2": {
+  "tier": "No adversary established"
+ },
+ "DBA-HPH-RE-3": {
+  "tier": "Military action, tier not established"
+ },
+ "DBA-HPH-RE-4": {
+  "tier": "No adversary established"
+ },
+ "DBA-HPH-RE-7": {
+  "tier": "No adversary established"
+ },
+ "DBA-HPH-RE-8": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-HPH-RE-9": {
+  "tier": "No adversary established"
+ },
+ "DBA-HPH-RE-10": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-IT-RE-1": {
+  "tier": "Military action, tier not established"
+ },
+ "DBA-IT-RE-2": {
+  "tier": "No adversary established"
+ },
+ "DBA-IT-RE-3": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-IT-RE-4": {
+  "tier": "No adversary established"
+ },
+ "DBA-IT-RE-5": {
+  "tier": "No adversary established"
+ },
+ "DBA-IT-RE-6": {
+  "tier": "No adversary established"
+ },
+ "DBA-IT-RE-7": {
+  "tier": "Military action, tier not established",
+  "confirmed": "Author's approval of the label, 21 Nov 2026."
+ },
+ "DBA-IT-RE-8": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-IT-RE-10": {
+  "tier": "Military-action tier met"
+ },
+ "DBA-IT-RE-11": {
+  "tier": "No adversary established"
+ },
+ "DBA-IT-RE-12": {
+  "tier": "Military action, tier not established",
+  "confirmed": "Author's approval of the label, 21 Nov 2026."
+ },
+ "DBA-FIN-RE-1": {
+  "tier": "Military action, tier not established"
+ },
+ "DBA-FIN-RE-2": {
+  "tier": "No adversary established"
+ },
+ "DBA-FIN-RE-3": {
+  "tier": "Military-action tier met"
+ },
+ "DBA-FIN-RE-4": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-FIN-RE-5": {
+  "tier": "No adversary established"
+ },
+ "DBA-FIN-RE-7": {
+  "tier": "No adversary established"
+ },
+ "DBA-FIN-RE-8": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-FIN-RE-9": {
+  "tier": "No adversary established"
+ },
+ "DBA-FA-RE-1": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-FA-RE-2": {
+  "tier": "No adversary established"
+ },
+ "DBA-FA-RE-3": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-FA-RE-4": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-FA-RE-5": {
+  "tier": "No adversary established"
+ },
+ "DBA-FA-RE-6": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-FA-RE-7": {
+  "tier": "No adversary established"
+ },
+ "DBA-FA-RE-8": {
+  "tier": "No adversary established"
+ },
+ "DBA-FA-RE-10": {
+  "tier": "No adversary established"
+ },
+ "DBA-CM-RE-1": {
+  "tier": "Military-action tier met"
+ },
+ "DBA-CM-RE-2": {
+  "tier": "No adversary established"
+ },
+ "DBA-CM-RE-3": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-CM-RE-4": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-CM-RE-5": {
+  "tier": "Military action, tier not established",
+  "confirmed": "Author's approval of the label, 21 Nov 2026."
+ },
+ "DBA-CM-RE-6": {
+  "tier": "No adversary established"
+ },
+ "DBA-CM-RE-7": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-CM-RE-8": {
+  "tier": "Adversarial, not military action",
+  "confirmed": "Author's approval of the label, 21 Nov 2026."
+ },
+ "DBA-DIB-RE-1": {
+  "tier": "No adversary established",
+  "confirmed": "Author's approval of the label, 21 Nov 2026."
+ },
+ "DBA-DIB-RE-2": {
+  "tier": "Military action, tier not established"
+ },
+ "DBA-DIB-RE-3": {
+  "tier": "Military action, tier not established"
+ },
+ "DBA-DIB-RE-5": {
+  "tier": "Military-action tier met"
+ },
+ "DBA-DIB-RE-6": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-DIB-RE-8": {
+  "tier": "Military action, tier not established"
+ },
+ "DBA-DIB-RE-9": {
+  "tier": "No adversary established"
+ },
+ "DBA-GF-RE-1": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-GF-RE-2": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-GF-RE-3": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-GF-RE-4": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-GF-RE-5": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-GF-RE-8": {
+  "tier": "Military-action tier met"
+ },
+ "DBA-GF-RE-9": {
+  "tier": "Military action, tier not established"
+ },
+ "DBA-GF-RE-10": {
+  "tier": "Adversarial, not military action",
+  "confirmed": "Author's approval of the label, 21 Nov 2026."
+ },
+ "DBA-GF-RE-11": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-GF-RE-12": {
+  "tier": "No adversary established"
+ },
+ "DBA-GF-RE-13": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-CF-RE-1": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-CF-RE-2": {
+  "tier": "No adversary established"
+ },
+ "DBA-CF-RE-3": {
+  "tier": "No adversary established"
+ },
+ "DBA-CF-RE-4": {
+  "tier": "No adversary established"
+ },
+ "DBA-CF-RE-5": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-CF-RE-7": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-CF-RE-8": {
+  "tier": "No adversary established"
+ },
+ "DBA-CF-RE-9": {
+  "tier": "Adversarial, not military action"
+ },
+ "DBA-GAS-RE-1": {
+  "tier": "No adversary established"
+ },
+ "DBA-ES-RE-1": {
+  "tier": "Adversarial, not military action",
+  "confirmed": "Author's approval of the label, 21 Nov 2026."
+ },
+ "DBA-OIL-RE-1": {
+  "tier": "No adversary established",
+  "confirmed": "Author's approval of the label, 21 Nov 2026."
+ }
+}

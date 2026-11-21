@@ -6,13 +6,22 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 C = lambda *p: os.path.join(ROOT, *p)
 
 # ---- configuration -------------------------------------------------------
-EDITION = 'CIKR Design Basis Examples, Edition 1 (November 2026)'
-EDITION_DATE = '1 November 2026'
-VERSION_DOI = '10.5281/zenodo.23863986'
+EDITION = 'CIKR Design Basis Examples, Edition 2 (November 2026)'
+EDITION_DATE = '21 November 2026'
+# The four Edition 2 records. Fill each version DOI when Zenodo reserves it; the build marks
+# the site "DOIs pending" and FINAL refuses to build until every one is filled.
+VERSION_DOI = '10.5281/zenodo.24427984'                              # Edition 1 record, version 2 (frameworks and classes)
 CONCEPT_DOI = '10.5281/zenodo.23863985'
+EDITION1_VERSION_DOI = '10.5281/zenodo.23863986'
+COLLECTIONS = {   # name -> slug, concept DOI, version DOI for this edition
+ 'Lifelines': {'slug': 'lifelines', 'concept': '10.5281/zenodo.24428020', 'version': '10.5281/zenodo.24428021'},
+ 'Public Safety and Government': {'slug': 'public-safety-and-government', 'concept': '10.5281/zenodo.24428030', 'version': '10.5281/zenodo.24428031'},
+ 'Industry and Economy': {'slug': 'industry-and-economy', 'concept': '10.5281/zenodo.24428037', 'version': '10.5281/zenodo.24428038'},
+}
+FINAL = True     # True only for the build pushed after Zenodo publishes
 FD_EDITION_DOI = '10.5281/zenodo.23401272'   # FD, November 2026 Edition (carries FD-DBL)
 SCRM_DOI = '10.5281/zenodo.21365261'
-PDF_BASE = 'https://scubanuke.github.io/publications/cikr/edition-1/'
+PDF_BASE = 'https://scubanuke.github.io/publications/cikr/edition-2/'
 SUBSTACK = 'https://timroxey.substack.com'
 DRAFT_BANNER = True          # set False for the public launch
 BANNER_TEXT = 'Early preview — November 2026'
@@ -76,6 +85,16 @@ READERS = json.load(open(C('content', 'readers.json'), encoding='utf-8'))
 PAGES = json.load(open(C('content', 'pages.json'), encoding='utf-8'))
 DESIGN = json.load(open(C('content', 'design_lines.json'), encoding='utf-8'))
 DATA = [(slug, name, parse_card(C('content', 'cards', f))) for f, slug, name in SECTORS]
+EVENTS = json.load(open(C('content', 'register', 'events.json'), encoding='utf-8'))
+TIERS = json.load(open(C('content', 'register', 'tiers.json'), encoding='utf-8'))
+for _ev in EVENTS: _ev['tier_label'] = TIERS[_ev['des']]['tier']
+EV = {x['des']: x for x in EVENTS}
+SNAME = {s: n for f, s, n in SECTORS}
+_missing = [k for k, v in COLLECTIONS.items() if not v['version'] or not v['concept']] + ([] if VERSION_DOI else ['Edition record'])
+if FINAL: assert not _missing, ('DOIs not filled', _missing)
+def doi(d): return '<a href="https://doi.org/%s">doi:%s</a>' % (d, d) if d else '<span class="note">DOI pending</span>'
+def re_pdf(x): return '%s%s' % (PDF_BASE, x['pdf'])   # the mirror is flat, as Edition 1's was
+def re_page(x): return 'events/%s.html' % x['des'].lower()
 
 # ---- layout --------------------------------------------------------------
 # Eclectic Technologies cross-site switcher: the same block carried by all eight sites.
@@ -138,7 +157,7 @@ def page(path, title, body, desc='', terms=True):
 {body}
 </main>
 <footer class="site"><div class="in">
-<p>Every document linked from this site is frozen in <em>{e(EDITION)}</em>, <a href="https://doi.org/{VERSION_DOI}">doi:{VERSION_DOI}</a>, as it stood on {EDITION_DATE}. Each is a working draft, marked DRAFT on its cover. The working documents continue to change, and later editions will record them.</p>
+<p>Every document linked from this site is frozen in <em>{e(EDITION)}</em>, as it stood on {EDITION_DATE}: the sector frameworks and facility classes in the edition record ({doi(VERSION_DOI)}), and the reference events in three collections, Lifelines, Public Safety and Government, and Industry and Economy. Each is a working draft, marked DRAFT on its cover. The working documents continue to change, and later editions will record them. <a href="https://doi.org/{EDITION1_VERSION_DOI}">Edition 1</a> stays citable for what it contains.</p>
 <p>Timothy E. Roxey, Eclectic Technologies. Text and documents licensed CC BY 4.0. Questions and requests: a private message through <a href="{SUBSTACK}">timroxey.substack.com</a>.</p>
 <p>The full library of Eclectic Technologies documents, with their DOIs: <a href="https://scubanuke.github.io/publications/">Publications</a>.</p>
 </div></footer>
@@ -168,6 +187,13 @@ def deplinks(text, r):
         else: out.append(e(p))
     return ', '.join(out)
 
+MONTHS = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
+def date_key(t):
+    y = re.search(r'(1[89]|20)\d\d', t).group(0)
+    m = re.search(r'\b(%s)' % '|'.join(MONTHS), t.lower())
+    dd = re.match(r'(?:from (?:about )?|at least )?(\d{1,2})\b', t)
+    return (y, MONTHS.index(m.group(1)) if m else -1, int(dd.group(1)) if dd else 0)
+
 # ---- sector pages ----------------------------------------------------------
 def sector_page(slug, name, d):
     r = '../'
@@ -178,8 +204,11 @@ def sector_page(slug, name, d):
         label = {'re': 'Observed · Reference event', 'uc': 'Postulated · Use case'}.get(k, c['kind'])
         if k == 'uc':
             foot = '<p class="onreq"><a href="%srequest.html">%s</a></p><p class="note">Summary card only. Use cases are not published.</p>' % (r, ON_REQUEST)
+        elif k == 're':
+            x = EV[c['des']]
+            foot = '<a href="%s%s">The event, its findings and what owners can do →</a><br><a href="%s">Read the frozen public edition (PDF) →</a><br><span class="note">Frozen in Edition 2, %s · %s collection · %s</span>' % (r, re_page(x), re_pdf(x), EDITION_DATE, e(x['collection']), doi(COLLECTIONS[x['collection']]['version']))
         else:
-            foot = '<a href="%s%s.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 1, %s · <a href="https://doi.org/%s">doi:%s</a></span>' % (PDF_BASE, e(c['src']), EDITION_DATE, VERSION_DOI, VERSION_DOI)
+            foot = '<a href="%s%s.pdf">Read the frozen document (PDF) →</a><br><span class="note">Frozen in Edition 2, %s · %s</span>' % (PDF_BASE, e(c['src']), EDITION_DATE, doi(VERSION_DOI))
         cards.append(f'''<article class="card {k}" id="{e(c['des'].lower())}">
 <span class="kind">{e(label)}</span>
 <h3>{e(c['title'])}</h3><p class="des">{e(c['des'])}</p>
@@ -188,7 +217,7 @@ def sector_page(slug, name, d):
 </article>''')
     extra = ''
     if slug == 'energy':
-        extra = f'<p class="prose">Energy is one sector with three subsectors: electric power, natural gas and petroleum. The edition also freezes the <a href="{PDF_BASE}DBA-GAS-Sector_Framework_v1_13.pdf">Natural Gas Sector Framework</a> (DBA-GAS-Sector_Framework, version 1.13), under which the facility class and the reference event shown here sit.</p>'
+        extra = f'<p class="prose">Energy is one sector with three subsectors: electric power, natural gas and petroleum. The edition also freezes the <a href="{PDF_BASE}DBA-GAS-Sector_Framework_v1_16.pdf">Natural Gas Sector Framework</a> (DBA-GAS-Sector_Framework, version 1.16), under which the facility class and the reference event shown here sit.</p>'
     others = FC.get(slug, [])
     olist = ''
     if others:
@@ -204,6 +233,10 @@ def sector_page(slug, name, d):
     if dl and not dl.get('hold'):
         retitle = [c['title'] for c in d['cards'] if KIND[c['kind']] == 're'][0]
         design = '<section class="design"><h2>What it means for the design</h2><p class="note">%s</p><p class="prose">%s %s</p><p class="note">From the findings of <em>%s</em> (%s).</p></section>' % (e(DESIGN['intro']), inline(dl['t']), inline(dl['c']), e(retitle), e(dl['f']))
+    sevs = sorted([x for x in EVENTS if x['sector'] == slug], key=lambda x: date_key(x['date']), reverse=True)
+    feat = [c['des'] for c in d['cards'] if KIND[c['kind']] == 're'][0]
+    lis = ''.join('<li><a href="%s%s">%s</a>%s <span class="st">— %s · %s</span></li>' % (r, re_page(x), e(x['title']), ' <span class="note">(shown above)</span>' if x['des'] == feat else '', e(x['date']), e(x['tier_label'])) for x in sevs)
+    register = '<section class="others" id="register"><h2>Every reference event in this sector</h2><p class="note">Newest first. Each opens to a page of its own, with what happened, the tier, each finding in a line, the annex for asset owners, and the frozen public edition.</p><ul>%s</ul></section>' % lis
     chapter = ''
     if MASTER_DRAFT_LIVE and slug in MASTER_DRAFT_CHAPTERS:
         chapter = '<p class="notice">The master draft reads this example in <a href="%smaster-draft.html">%s</a>.</p>' % (r, e(MASTER_DRAFT_CHAPTERS[slug]))
@@ -218,6 +251,7 @@ def sector_page(slug, name, d):
 {''.join(cards)}
 </div>
 {design}
+{register}
 {chapter}
 {olist}'''
     page('sectors/%s.html' % slug, '%s — CIKR Design Basis Examples' % name, body, d['sowhat'])
@@ -242,7 +276,7 @@ def home():
 <p class="prose">New to the idea? Start with <a href="design-basis.html">What is a design basis?</a></p>
 {md}
 <h2>Citing this site</h2>
-<p class="prose">Cite the edition: T. Roxey, <em>{e(EDITION)}</em>, Eclectic Technologies, November 2026, <a href="https://doi.org/{VERSION_DOI}">https://doi.org/{VERSION_DOI}</a>. To cite the example set as it currently stands, across editions, use <a href="https://doi.org/{CONCEPT_DOI}">https://doi.org/{CONCEPT_DOI}</a>.</p>'''
+<p class="prose">Cite the edition: T. Roxey, <em>{e(EDITION)}</em>, Eclectic Technologies, November 2026, {doi(VERSION_DOI)}. To cite the example set as it currently stands, across editions, use <a href="https://doi.org/{CONCEPT_DOI}">doi:{CONCEPT_DOI}</a>. A reference event is cited by its collection's DOI, given on the event's own page.</p>'''
     page('index.html', 'CIKR Design Basis Examples', body, 'One worked design basis example for each critical infrastructure sector: the sector framework, a facility class, a use case and a real event.')
 
 def design_basis():
@@ -269,26 +303,56 @@ def readers():
         page('readers/%s.html' % k, '%s — CIKR Design Basis Examples' % v['title'], body, v['blurb'])
 
 TIER_ORDER = ['Military-action tier met', 'Military action, tier not established', 'Adversarial, not military action', 'No adversary established']
-MONTHS = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
-def date_key(t):
-    y = re.search(r'(1[89]|20)\d\d', t).group(0)
-    m = re.search(r'\b(%s)' % '|'.join(MONTHS), t.lower())
-    dd = re.match(r'(\d{1,2})\b', t)
-    return (y, MONTHS.index(m.group(1)) if m else -1, int(dd.group(1)) if dd else 0)
 def reference_events():
-    rows = []
-    for slug, name, d in DATA:
-        for c in d['cards']:
-            if KIND[c['kind']] != 're': continue
-            assert c['tier'] in TIER_ORDER, (c['des'], c['tier'])
-            rows.append((date_key(c['date']), name, c, slug))
-    rows.sort(key=lambda x: (x[0], x[1]))
-    trs = ''.join('<tr><td><a href="sectors/%s.html#%s">%s</a><br><span class="note">%s</span></td><td><a href="sectors/%s.html">%s</a></td><td>%s</td><td>%s</td></tr>'
-                  % (s, e(c['des'].lower()), e(c['title']), e(c['des']), s, e(n), e(c['date']), e(c['tier'])) for y, n, c, s in rows)
-    body = f'''<p class="eyebrow">Observed events, all sectors</p><h1>Reference events</h1>
-<p class="prose">A reference event reads a real event back through the design basis to ask whether the method was sufficient. Each one lives on its sector's page; this index lists them together, oldest first, so they can be read across sectors. It is generated from the same cards as the sector pages and is an index, not a second register: the tier shown is the reading frozen in <em>{e(EDITION)}</em>, and each event's own entry, and the document behind it, is where the reading is made.</p>
-<div class="tablewrap"><table class="reidx"><thead><tr><th>Event</th><th>Sector</th><th>Date</th><th>Tier</th></tr></thead><tbody>{trs}</tbody></table></div>'''
-    page('reference-events.html', 'Reference events — CIKR Design Basis Examples', body, 'Every reference event on the site, across all sectors, with its date and tier.')
+    rows = sorted(EVENTS, key=lambda x: (date_key(x['date']), x['des']))
+    trs = ''.join('<tr data-date="%s" data-tier="%d"><td><a href="%s">%s</a><br><span class="note">%s</span></td><td><a href="sectors/%s.html">%s</a></td><td>%s</td><td>%s</td><td>%s</td></tr>'
+                  % ('%s-%02d-%02d' % (lambda k: (k[0], k[1] + 1, k[2]))(date_key(x['date'])), TIER_ORDER.index(x['tier_label']), re_page(x), e(x['title']), e(x['des']), x['sector'], e(SNAME[x['sector']]), e(x['collection']), e(x['date']), e(x['tier_label'])) for x in rows)
+    body = f'''<p class="eyebrow">Observed events, all sectors</p><h1>The reference event register</h1>
+<p class="prose">A reference event reads a real event back through the design basis to ask whether the method was sufficient. This register lists every reference event in <em>{e(EDITION)}</em>: {len(EVENTS)} events across fifteen sectors, oldest first. Select a column heading to sort by it. Each event opens to a page of its own with what happened, the tier, each finding in a line, the annex written for asset owners, and the frozen public edition with its DOI. Nuclear events join at the edition nuclear enters the site.</p>
+<p class="prose note">The tier is the instrument's reading of whether the event shows all four marks of deliberate military action: intentionality, persistence, precision and denial. It is not a finding of who acted.</p>
+<div class="tablewrap"><table class="reidx sortable"><thead><tr><th data-k="0">Event</th><th data-k="1">Sector</th><th data-k="2">Collection</th><th data-k="date">Date</th><th data-k="tier">Tier</th></tr></thead><tbody>{trs}</tbody></table></div>
+<script>
+document.querySelectorAll('table.sortable th').forEach(function(th){{th.style.cursor='pointer';th.addEventListener('click',function(){{
+ var tb=th.closest('table').tBodies[0],k=th.dataset.k,rows=[].slice.call(tb.rows),asc=th.dataset.asc!=='1';
+ rows.sort(function(a,b){{var x,y;if(k==='date'){{x=a.dataset.date;y=b.dataset.date}}else if(k==='tier'){{x=+a.dataset.tier;y=+b.dataset.tier;return asc?x-y:y-x}}else{{x=a.cells[+k].textContent;y=b.cells[+k].textContent}}return asc?x.localeCompare(y):y.localeCompare(x)}});
+ rows.forEach(function(r){{tb.appendChild(r)}});th.closest('tr').querySelectorAll('th').forEach(function(h){{delete h.dataset.asc}});th.dataset.asc=asc?'1':'0';}});}});
+</script>'''
+    page('reference-events.html', 'Reference event register — CIKR Design Basis Examples', body, 'Every reference event in the edition, across fifteen sectors, with its date, collection and tier.')
+
+STUB_NOTE = 'One section of this document is withheld from the public edition and is available to defenders and regulators on request.'
+def annex_html(blocks):
+    out = []
+    for b in blocks:
+        if 'h2' in b: out.append('<h3>%s</h3>' % e(b['h2']))
+        elif 'h3' in b: out.append('<h4>%s</h4>' % e(b['h3']))
+        elif 'p' in b: out.append('<p>%s</p>' % e(b['p']))
+        elif 'table' in b:
+            head, *rest = b['table']
+            out.append('<div class="tablewrap"><table class="reidx"><thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>' % (''.join('<th>%s</th>' % e(c) for c in head), ''.join('<tr>%s</tr>' % ''.join('<td>%s</td>' % e(c) for c in row) for row in rest)))
+    return ''.join(out)
+def event_pages():
+    for x in EVENTS:
+        r = '../'; col = COLLECTIONS[x['collection']]
+        what = ''.join('<p>%s</p>' % e(p) for p in x['what'])
+        fl = ''.join('<li><strong>%s, %s</strong> %s</li>' % (e(f['id']), e(f['title']), e(f['text'])) for f in x['findings'])
+        imp = '<p class="note">Impacted sector: %s</p>' % e(x['impacted']) if x['impacted'] else ''
+        wh = '<p class="notice">%s <a href="%srequest.html">Ask for more</a>.</p>' % (STUB_NOTE, r) if x['withholds'] else ''
+        cite = 'T. Roxey, <em>%s</em> (%s), version %s, Public Edition, in <em>CIKR Design Basis Reference Events: %s, Edition 2 (November 2026)</em>, Eclectic Technologies, November 2026, %s.' % (e(x['title']), e(x['des']), e(x['version']), e(x['collection']), doi(col['version']))
+        body = f'''<p class="eyebrow"><a href="{r}sectors/{x['sector']}.html">{e(SNAME[x['sector']])}</a> · Reference event · {e(x['des'])}</p>
+<h1>{e(x['title'])}</h1>
+<p class="note">Event date: {e(x['date_full'])} · Read from instrument version {e(x['version'])} · {e(x['collection'])} collection</p>
+{imp}
+<h2>What happened</h2><div class="prose">{what}</div>
+<h2>Tier</h2><p class="prose"><strong>{e(x['tier_label'])}.</strong> {e(x['tier'])}</p>
+<h2>Findings</h2><ul class="prose findings">{fl}</ul>
+<h2>For asset owners</h2><p class="prose note">Annex A of the instrument, in full. It is written for owners and operators, and it states no requirement.</p>
+<div class="prose annex">{annex_html(x['annex'])}</div>
+<h2>The frozen document</h2>
+{wh}
+<p class="prose"><a href="{re_pdf(x)}">Read the frozen public edition (PDF) →</a></p>
+<p class="prose note">Cite as: {cite}</p>
+<p class="prose"><a href="{r}reference-events.html">All reference events →</a></p>'''
+        page(re_page(x), '%s — CIKR Design Basis Examples' % x['title'], body, ' '.join(x['what'])[:200])
 
 def glossary():
     items = ''.join('<dt id="%s">%s</dt><dd>%s%s</dd>' % (k, e(v['term']), inline(v['def']), ' <span class="note">From the <a href="%s">Foundational Definitions glossary</a>.</span>' % FD_GLOSSARY_URL if 'fd' in v else '') for k, v in sorted(GLOSSARY.items(), key=lambda x: x[1]['term'].lower()))
@@ -312,7 +376,8 @@ def master_draft():
 
 if __name__ == '__main__':
     for slug, name, d in DATA: sector_page(slug, name, d)
-    home(); design_basis(); readers(); reference_events(); glossary(); request()
+    home(); design_basis(); readers(); reference_events(); event_pages(); glossary(); request()
+    if _missing: print('DOIs pending:', ', '.join(_missing))
     if MASTER_DRAFT_LIVE: master_draft()
     elif os.path.exists(C('master-draft.html')): os.remove(C('master-draft.html'))
     print('built', len(DATA), 'sector pages')

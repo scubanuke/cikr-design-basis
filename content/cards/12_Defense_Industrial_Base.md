@@ -7,7 +7,7 @@
 
 ## Sector framework — Defense Industrial Base Sector Framework (DBA-DIB_Sector_Framework)
 A sector framework states what a sector's systems must be built to withstand, from ordinary accidents up to deliberate military action. This one covers the industry that builds, supplies and tests the weapons and equipment of the armed forces. It has two features that together set it apart. The threat is not only that a plant stops, but that an adversary copies a design or corrupts a part, and rebuilding cannot undo that harm. And the sector sits downstream of manufacturing, so it inherits that sector's exposure to parts that only a few sources can make. It is a working draft, with some sections still to be written.
-*Source: DBA-DIB_Sector_Framework_v0_5*
+*Source: DBA-DIB_Sector_Framework_v0_7*
 
 ## Facility class — Defense Production and Sustainment (DBA-DIB-DP-FC1)
 A facility class takes the sector framework down to one kind of facility. This one covers the plants, shipyards, arsenals and depots that build and maintain military equipment, including ammunition plants. It traces three ways harm reaches the armed forces: production is lost or slowed, the technical data a plant holds is copied, or the plant's output is altered so that it is not what it is said to be. The second and third harms are not undone by rebuilding. The class treats a plant's drawings and process records as an asset in their own right, and it states plainly what remains beyond its design.
@@ -21,4 +21,4 @@ A use case runs a postulated attack forward through a facility class to see wher
 **Date:** 3 May 2024
 **Tier:** No adversary established
 A reference event reads a real event back through the design basis to ask whether the method was sufficient. On 3 May 2024 a fire partly collapsed a production building at a Berlin site of the Diehl group, a German defense company. The site coats and stamps metal parts and, the company says, does not supply its defense unit. In December 2024 the public prosecutor closed the case, finding no sign of arson and pointing to an electrical cause. Unnamed officials had suspected Russian saboteurs; that suspicion is unproven, and no government has attributed the fire. No adversary is established, so the event does not meet the test for military action.
-*Source: DBA-DIB-RE-1_Fire_at_the_Diehl_Plant_in_Berlin_v0_2*
+*Source: DBA-DIB-RE-1_Fire_at_the_Diehl_Plant_in_Berlin_v0_3*
